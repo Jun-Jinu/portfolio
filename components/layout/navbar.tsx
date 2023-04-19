@@ -16,6 +16,7 @@ const NavbarContainer = styled.nav<{ darkMode: boolean }>`
     color: ${({ darkMode }) => (darkMode ? "#f9f9f9" : "#333")};
     padding: 1rem;
     width: 100%;
+    border-bottom: 1px solid #e1e3e6;
 `;
 
 const NavMenuContainer = styled.div`
@@ -103,25 +104,6 @@ const Navbar: React.FC<NavbarProps> = ({
             <NavRightContainer>
                 <NavButton onClick={toggleDarkMode} isDarkMode={darkMode}>
                     {darkMode ? (
-                        // 달 이미지
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="30"
-                            height="30"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <path
-                                data-v-9f42629e=""
-                                d="M16.085 13.417c-5.013 0-9.076-4.04-9.076-9.023 0-1.596.42-3.093 1.152-4.394C3.58.456 0 4.3 0 8.977 0 13.961 4.064 18 9.076 18c3.407 0 6.372-1.868 7.924-4.628-.3.03-.605.045-.914.045z"
-                                transform="translate(-1344 -24) translate(1248 24) translate(96) translate(4 3)"
-                            ></path>
-                        </svg>
-                    ) : (
                         // 해 이미지
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -142,6 +124,25 @@ const Navbar: React.FC<NavbarProps> = ({
                                 stroke-width="1.5"
                                 d="M18.972 4.88l-1.154 1.154 1.154-1.154 1.154-1.154-1.154 1.154zM4.608 19.245L3.453 20.4l1.155-1.155 1.154-1.154-1.154 1.154zM21.948 12.063L20.315 12.063 21.948 12.063 23.58 12.063zM1.632 12.063L0 12.063 1.632 12.063 3.265 12.063zM18.973 19.245l-1.154-1.154 1.154 1.154 1.154 1.155-1.154-1.155zM4.608 4.88L3.453 3.726 4.608 4.88l1.154 1.154L4.608 4.88zM11.824 1.905L11.824 3.538 11.824 1.905 11.824.273zM11.824 22.22L11.824 23.853 11.824 22.22 11.824 20.588z"
                                 transform="translate(-1423 -168) translate(79.5 145) translate(1248 24) translate(96)"
+                            ></path>
+                        </svg>
+                    ) : (
+                        // 달 이미지
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                data-v-9f42629e=""
+                                d="M16.085 13.417c-5.013 0-9.076-4.04-9.076-9.023 0-1.596.42-3.093 1.152-4.394C3.58.456 0 4.3 0 8.977 0 13.961 4.064 18 9.076 18c3.407 0 6.372-1.868 7.924-4.628-.3.03-.605.045-.914.045z"
+                                transform="translate(-1344 -24) translate(1248 24) translate(96) translate(4 3)"
                             ></path>
                         </svg>
                     )}
