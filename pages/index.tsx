@@ -8,6 +8,7 @@ import Navbar from "@/components/layout/navbar";
 import Introduce from "@/components/common/introduce";
 import Skill from "@/components/common/skill";
 import Footer from "@/components/layout/footer";
+import ScrollToTopButton from "@/components/common/scroll-to-top-botton";
 
 import ImgCard from "@/components/common/img-card";
 import Project from "@/components/common/project";
@@ -55,6 +56,7 @@ export default function Home() {
                 <Project />
             </Main>
             <Footer />
+            <ScrollToTopButton />
         </>
     );
 }
