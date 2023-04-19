@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import BasicCard from "./basic-card";
 interface Skill {
     name: string;
     percentage: number;
@@ -7,12 +7,18 @@ interface Skill {
 
 interface SkillListProps {}
 
+const Title = styled.h2`
+    color: #333;
+    font-size: 28px;
+    margin: 18px;
+`;
+
 const Container = styled.div`
     display: flex;
     flex-direction: column;
 `;
 
-const Title = styled.h2`
+const CardTitle = styled.h2`
     color: #333;
     font-size: 24px;
     margin-bottom: 20px;
@@ -59,14 +65,19 @@ export default function SkillList() {
     ];
 
     return (
-        <Container>
-            <Title>Skills</Title>
-            {skills.map((skill, index) => (
-                <SkillContainer key={index}>
-                    <Name>{skill.name}</Name>
-                    <Bar percentage={skill.percentage} />
-                </SkillContainer>
-            ))}
-        </Container>
+        <>
+            <Title>🛠️ 사용 기술</Title>
+            <BasicCard>
+                <Container>
+                    <CardTitle>Skills</CardTitle>
+                    {skills.map((skill, index) => (
+                        <SkillContainer key={index}>
+                            <Name>{skill.name}</Name>
+                            <Bar percentage={skill.percentage} />
+                        </SkillContainer>
+                    ))}
+                </Container>
+            </BasicCard>
+        </>
     );
 }

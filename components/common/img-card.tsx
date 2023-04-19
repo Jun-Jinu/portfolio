@@ -17,6 +17,8 @@ const Container = styled.div`
     height: auto;
     background-color: #fff;
     border-radius: 12px;
+    margin-right: 18px;
+    margin-bottom: 54px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
     overflow: hidden;
     transition: all 0.2s ease-in-out;

@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
-interface CardProps {
-    category: string[];
-    title: string;
-    tag: string[];
-    image: string;
-}
-
-const Card = styled.div`
+const BasicCard = styled.div`
     display: flex;
     align-items: start;
     justify-content: center;
@@ -16,6 +9,7 @@ const Card = styled.div`
     background-color: #fff;
     border-radius: 12px;
     padding: 25px;
+    margin-bottom: 54px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
     overflow: hidden;
     transition: all 0.2s ease-in-out;
@@ -25,9 +19,5 @@ const Card = styled.div`
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
 `;
-
-const BasicCard = () => {
-    return <Card></Card>;
-};
 
 export default BasicCard;

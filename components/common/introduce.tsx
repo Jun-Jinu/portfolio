@@ -8,8 +8,7 @@ interface ModeProps {
 const Container = styled.div`
     background-color: #f9f9f9;
     align-items: center;
-    padding: 200px 0px;
-    height: 500px;
+    padding: 220px 0px;
 `;
 
 const Text = styled.p`
