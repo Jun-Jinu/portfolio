@@ -14,8 +14,12 @@ const Title = styled.h2`
 `;
 
 const Container = styled.div`
+    background-color: #f9f9f9;
+`;
+const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
+    position: relative;
 `;
 
 const CardTitle = styled.h2`
@@ -56,6 +60,14 @@ const Bar = styled.div<{ percentage: number }>`
     }
 `;
 
+const SeeMoreLink = styled.p`
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #666;
+    font-size: 16px;
+`;
+
 export default function SkillList() {
     const skills: Skill[] = [
         { name: "Skill 1", percentage: 70 },
@@ -65,19 +77,20 @@ export default function SkillList() {
     ];
 
     return (
-        <>
+        <Container>
             <Title>🛠️ 사용 기술</Title>
             <BasicCard>
-                <Container>
+                <CardContainer>
                     <CardTitle>Skills</CardTitle>
+                    <SeeMoreLink>See more</SeeMoreLink>
                     {skills.map((skill, index) => (
                         <SkillContainer key={index}>
                             <Name>{skill.name}</Name>
                             <Bar percentage={skill.percentage} />
                         </SkillContainer>
                     ))}
-                </Container>
+                </CardContainer>
             </BasicCard>
-        </>
+        </Container>
     );
 }

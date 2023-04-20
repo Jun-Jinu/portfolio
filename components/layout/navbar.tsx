@@ -40,7 +40,7 @@ const NavRightContainer = styled.div`
     width: 20%;
 `;
 
-const NavMenuLink = styled.a<{ isDarkMode: boolean }>`
+const NavMenuLink = styled.b<{ isDarkMode: boolean }>`
     color: ${({ isDarkMode }) => (isDarkMode ? "#f9f9f9" : "#333")};
     margin: 0 1rem;
     cursor: pointer;
@@ -52,7 +52,7 @@ const NavMenuLink = styled.a<{ isDarkMode: boolean }>`
         color: ${({ isDarkMode }) => (isDarkMode ? "#ccc" : "#666")};
     }
 `;
-const NavMainLink = styled.a<{ isDarkMode: boolean }>`
+const NavMainLink = styled.b<{ isDarkMode: boolean }>`
     color: ${({ isDarkMode }) => (isDarkMode ? "#f9f9f9" : "#333")};
     margin: 0 1rem;
     cursor: pointer;
@@ -86,11 +86,11 @@ const Navbar = ({
     return (
         <NavbarContainer darkMode={darkMode}>
             <NavLeftContainer>
-                {/* <Link href="/jinu" passHref>
+                <Link href="/jinu" passHref>
                     <NavMainLink isDarkMode={darkMode}>JINU</NavMainLink>
-                </Link> */}
+                </Link>
             </NavLeftContainer>
-            {/* <NavMenuContainer>
+            <NavMenuContainer>
                 <Link href="/skills" passHref>
                     <NavMenuLink isDarkMode={darkMode}>Skills</NavMenuLink>
                 </Link>
@@ -100,7 +100,7 @@ const Navbar = ({
                 <Link href="/projects" passHref>
                     <NavMenuLink isDarkMode={darkMode}>Projects</NavMenuLink>
                 </Link>
-            </NavMenuContainer> */}
+            </NavMenuContainer>
             <NavRightContainer>
                 <NavButton onClick={toggleDarkMode} isDarkMode={darkMode}>
                     {darkMode ? (

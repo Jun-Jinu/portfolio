@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import ImgCard from "@/components/common/img-card";
 
+const Container = styled.div`
+    background-color: #f9f9f9;
+`;
 const Title = styled.h2`
     color: #333;
     font-size: 28px;
@@ -13,7 +16,7 @@ const CardContainer = styled.div`
 
 export default function Project() {
     return (
-        <>
+        <Container>
             <Title>📌 진행한 프로젝트</Title>
             <CardContainer>
                 <ImgCard
@@ -49,6 +52,6 @@ export default function Project() {
                     }
                 />
             </CardContainer>
-        </>
+        </Container>
     );
 }
