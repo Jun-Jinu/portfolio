@@ -28,7 +28,7 @@ export default function Introduce() {
     return (
         <Container>
             <Text>
-                👋 안녕하세요! <Name>개발자 전진우</Name>입니다.
+                👨🏻‍💻 안녕하세요! <Name>개발자 전진우</Name>입니다.
             </Text>
             <Text>기술로 더 나은 세상을 만들기 위해 성장하고 있습니다.</Text>
         </Container>

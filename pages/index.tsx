@@ -5,6 +5,8 @@ import Image from "next/image";
 import Navbar from "@/components/layout/navbar";
 import Introduce from "@/components/common/introduce";
 import Skill from "@/components/common/skill";
+import Career from "@/components/common/career";
+import AboutMe from "@/components/common/about-me";
 import Footer from "@/components/layout/footer";
 import ScrollToTopButton from "@/components/common/scroll-to-top-botton";
 
@@ -45,8 +47,17 @@ export default function Home() {
             />
             <main>
                 <Introduce />
+                <AboutMe />
                 <Skill />
                 <Project />
+                <Career
+                    items={[
+                        { date: "2020.03 - 2021.05", name: "Company A" },
+                        { date: "2019.03 - 2020.05", name: "Company B" },
+                        { date: "2018.03 - 2019.02", name: "Company C" },
+                        // Add more items here as needed
+                    ]}
+                />
             </main>
             <Footer />
             <ScrollToTopButton />

@@ -9,6 +9,11 @@ interface NavbarProps {
 }
 
 const NavbarContainer = styled.nav<{ darkMode: boolean }>`
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,6 +96,9 @@ const Navbar = ({
                 </Link>
             </NavLeftContainer>
             <NavMenuContainer>
+                <Link href="/Aboutme" passHref>
+                    <NavMenuLink isDarkMode={darkMode}>About Me</NavMenuLink>
+                </Link>
                 <Link href="/skills" passHref>
                     <NavMenuLink isDarkMode={darkMode}>Skills</NavMenuLink>
                 </Link>
