@@ -2,8 +2,6 @@ import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-import styled from "styled-components";
-
 import Navbar from "@/components/layout/navbar";
 import Introduce from "@/components/common/introduce";
 import Skill from "@/components/common/skill";
@@ -16,11 +14,6 @@ import Project from "@/components/common/project";
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false);
     const [lang, setLang] = useState("kor");
-
-    const Main = styled.main`
-        background-color: #f9f9f9;
-        padding: 10px 100px;
-    `;
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
@@ -50,11 +43,11 @@ export default function Home() {
                 lang={lang}
                 toggleLang={toggleLang}
             />
-            <Main>
+            <main>
                 <Introduce />
                 <Skill />
                 <Project />
-            </Main>
+            </main>
             <Footer />
             <ScrollToTopButton />
         </>

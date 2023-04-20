@@ -42,7 +42,7 @@ const Image = styled.img`
     border-top-right-radius: 12px;
 `;
 
-const CategoryContainer = styled.h4`
+const CategoryContainer = styled.h2`
     display: flex;
     font-size: 18px;
     font-weight: 400;
@@ -50,14 +50,14 @@ const CategoryContainer = styled.h4`
     margin: 0 0 10px;
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
     font-size: 24px;
     font-weight: 700;
     color: #000;
     margin: 20px 0 10px;
 `;
 
-const TagContainer = styled.p`
+const TagContainer = styled.div`
     display: flex;
 `;
 
