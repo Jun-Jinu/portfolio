@@ -9,7 +9,6 @@ import {
     AiOutlineMail,
     AiOutlineHome,
 } from "react-icons/ai";
-
 interface ListItemProps {
     date: string;
     name: string;
@@ -97,7 +96,7 @@ const AboutMe = () => (
         <Title>📌About Me</Title>
         <BasicCard>
             <RowContainer>
-                <Image src="https://placehold.it/400x500" alt="career" />
+                <Image src="/images/my_img.jpeg" alt="전진우 프로필 사진" />
                 <InfoContainer>
                     {data.map(({ icon, label, value }) => (
                         <div key={label}>
