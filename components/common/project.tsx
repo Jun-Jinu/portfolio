@@ -2,23 +2,6 @@ import styled from "styled-components";
 import ImgCard from "@/components/common/img-card";
 import ProjectCard from "./project-card";
 
-const projectsData = [
-    {
-        title: "Project 1",
-        subtitle: "Subtitle for Project 1",
-        imageSrc: "https://placehold.it/300x500",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum, purus ac rhoncus dignissim, lacus turpis congue eros, vel volutpat ex elit sed elit.",
-    },
-    {
-        title: "Project 2",
-        subtitle: "Subtitle for Project 2",
-        imageSrc: "https://placehold.it/300x500",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum, purus ac rhoncus dignissim, lacus turpis congue eros, vel volutpat ex elit sed elit.",
-    },
-];
-
 const Container = styled.div`
     background-color: #f9f9f9;
     margin: 54px 0;
