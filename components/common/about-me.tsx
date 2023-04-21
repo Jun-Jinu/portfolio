@@ -65,6 +65,27 @@ const Icon = styled.span`
     font-size: 52px;
     margin-right: 16px;
 `;
+const Bubble = styled.div`
+    font-size: 1.4rem;
+    position: relative;
+    margin: 50px 0;
+    width: 100%;
+    padding: 25px;
+
+    background: #08bcff;
+    border-radius: 20px;
+
+    &:after {
+        border-top: 0px solid transparent;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 20px solid #08bcff;
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 200px;
+    }
+`;
 
 const data = [
     { icon: <AiOutlineUser />, label: "이름", value: "전진우" },
@@ -73,21 +94,9 @@ const data = [
         label: "생년월일",
         value: "1998년 7월 19일",
     },
-    {
-        icon: <AiOutlineHome />,
-        label: "주소",
-        value: "서울특별시 광진구",
-    },
-    {
-        icon: <AiOutlineBook />,
-        label: "학력",
-        value: "세종대학교 졸업",
-    },
-    {
-        icon: <AiOutlinePhone />,
-        label: "전화번호",
-        value: "010-7620-9128",
-    },
+    { icon: <AiOutlineHome />, label: "주소", value: "서울특별시 광진구" },
+    { icon: <AiOutlineBook />, label: "학력", value: "세종대학교 졸업" },
+    { icon: <AiOutlinePhone />, label: "전화번호", value: "010-7620-9128" },
     { icon: <AiOutlineMail />, label: "이메일", value: "soa9719@naver.com" },
 ];
 
@@ -110,6 +119,7 @@ const AboutMe = () => (
                 </InfoContainer>
             </RowContainer>
         </BasicCard>
+        <Bubble>안녕하세요!</Bubble>
     </ColumnContainer>
 );
 

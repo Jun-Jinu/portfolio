@@ -6,6 +6,7 @@ import { useState } from "react";
 interface Skill {
     name: string;
     description: string;
+    category: string;
 }
 
 interface SkillListProps {}
@@ -18,49 +19,123 @@ const Title = styled.h2`
 
 const Container = styled.div`
     background-color: #f9f9f9;
+    margin: 54px 0;
 `;
 
 export default function SkillList() {
     const [skills, setSkills] = useState<Skill[]>([
         // Frontend
         {
-            name: "HTML / CSS / JavaScript",
-            description: "자바스크립트를 사용했습니다.",
+            name: "HTML/CSS/JavaScript",
+            description: "Used JavaScript.",
+            category: "Frontend",
         },
-        { name: "Sass(scss)", description: "리액트를 사용했습니다." },
-        { name: "TypeScript", description: "리액트를 사용했습니다." },
-        { name: "ReactJs", description: "리액트를 사용했습니다." },
-        { name: "NextJs", description: "리액트를 사용했습니다." },
-        { name: "Recoil", description: "css를 많이 사용했습니다." },
+        {
+            name: "Sass(scss)",
+            description: "I used React.",
+            category: "Frontend",
+        },
+        {
+            name: "TypeScript",
+            description: "I used React.",
+            category: "Frontend",
+        },
+        { name: "ReactJs", description: "I used React.", category: "Frontend" },
+        { name: "NextJs", description: "I used React.", category: "Frontend" },
+        {
+            name: "Recoil",
+            description: "I used a lot of css.",
+            category: "Frontend",
+        },
 
         // Mobile App
-        { name: "Dart / Flutter", description: "css를 많이 사용했습니다." },
+        {
+            name: "Dart / Flutter",
+            description: "I used a lot of css.",
+            category: "Mobile App",
+        },
 
         // Backend
-        { name: "NestJs", description: "css를 많이 사용했습니다." },
-        { name: "MYSQL", description: "css를 많이 사용했습니다." },
+        {
+            name: "NestJs",
+            description: "I used a lot of css.",
+            category: "Backend",
+        },
+        {
+            name: "MYSQL",
+            description: "I used a lot of css.",
+            category: "Backend",
+        },
 
         // Deployment
-        { name: "AWS", description: "css를 많이 사용했습니다." },
-        { name: "netlify", description: "css를 많이 사용했습니다." },
-        { name: "Vercel", description: "css를 많이 사용했습니다." },
+        {
+            name: "AWS",
+            description: "I used a lot of css.",
+            category: "Deployment",
+        },
+        {
+            name: "netlify",
+            description: "I used a lot of css.",
+            category: "Deployment",
+        },
+        {
+            name: "Vercel",
+            description: "I used a lot of css.",
+            category: "Deployment",
+        },
 
         // Communication
-        { name: "Slack", description: "css를 많이 사용했습니다." },
-        { name: "Notion", description: "css를 많이 사용했습니다." },
-        { name: "Figma", description: "css를 많이 사용했습니다." },
+        {
+            name: "Slack",
+            description: "I used a lot of css.",
+            category: "Communication",
+        },
+        {
+            name: "Notion",
+            description: "I used a lot of css.",
+            category: "Communication",
+        },
+        {
+            name: "Figma",
+            description: "I used a lot of css.",
+            category: "Communication",
+        },
 
         // Tool
-        { name: "VS Code", description: "css를 많이 사용했습니다." },
-        { name: "DataGrip", description: "css를 많이 사용했습니다." },
-        { name: "Android Studio", description: "css를 많이 사용했습니다." },
-        { name: "Postman", description: "css를 많이 사용했습니다." },
+        {
+            name: "VS Code",
+            description: "I used a lot of css.",
+            category: "Tool",
+        },
+        {
+            name: "DataGrip",
+            description: "I used a lot of css.",
+            category: "Tool",
+        },
+        {
+            name: "Android Studio",
+            description: "I used a lot of css.",
+            category: "Tool",
+        },
+        {
+            name: "Postman",
+            description: "I used a lot of css.",
+            category: "Tool",
+        },
 
         //Version Control
-        { name: "GitHub", description: "css를 많이 사용했습니다." },
+        {
+            name: "GitHub",
+            description: "I used a lot of css.",
+            category: "Version Control",
+        },
 
         //Certificate
-        { name: "정보처리기사", description: "css를 많이 사용했습니다." },
+        {
+            name: "Information Processing Engineer",
+            description: "I used a lot of css.",
+            category: "Certificate",
+        },
     ]);
 
     return (
@@ -69,7 +144,7 @@ export default function SkillList() {
             {skills.map((skill, index) => (
                 <Accordian
                     key={index}
-                    title={skill.name}
+                    title={`[${skill.category}] ${skill.name}`}
                     content={skill.description}
                 />
             ))}

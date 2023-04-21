@@ -50,14 +50,6 @@ export default function Home() {
                 <AboutMe />
                 <Skill />
                 <Project />
-                <Career
-                    items={[
-                        { date: "2020.03 - 2021.05", name: "Company A" },
-                        { date: "2019.03 - 2020.05", name: "Company B" },
-                        { date: "2018.03 - 2019.02", name: "Company C" },
-                        // Add more items here as needed
-                    ]}
-                />
             </main>
             <Footer />
             <ScrollToTopButton />
