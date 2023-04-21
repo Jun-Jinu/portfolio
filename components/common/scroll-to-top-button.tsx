@@ -53,7 +53,7 @@ const ScrollToTopButton = () => {
     }, []);
 
     const scrollToTop = () => {
-        window.scroll({ top: 0, behavior: "instant" });
+        window.scroll({ top: 0, behavior: "smooth" });
         //느리게 하려면 smooth
     };
 

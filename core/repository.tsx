@@ -6,7 +6,7 @@ const SkillDescription = styled.span`
 
 export const ProjectData = [
     {
-        title: "전진우 포트폴리오 사이트",
+        title: "포트폴리오 사이트",
         subtitle: "[WEB] 1인 프로젝트",
         imageSrc: "https://placehold.it/400x500",
         description: (
@@ -94,45 +94,39 @@ export const ProjectData = [
         imageSrc: "https://placehold.it/400x500",
         description: (
             <span>
-                독거노인 사고대응 솔루션 서비스입니다. 학부
+                독거노인 사고대응 솔루션 서비스입니다. 세종대학교
                 캡스톤(졸업작품)과목을 통해 ATEC과 협업하여 프로젝트를
                 진행했습니다. 독거노인의 고독사 문제 해결책을 찾으며
                 개발했습니다.
                 <br />
-                <br />
-                <SkillDescription>ReactJs 라이브러리</SkillDescription>를 주로
-                활용한 프로젝트입니다. Drag & Drop 기능은{" "}
-                <SkillDescription>GrapesJs 라이브러리</SkillDescription>를
-                활용했고 비전문가를 대상으로 한 서비스 구상이 핵심이었기에
-                다양한 만들어진 컴포넌트 및 개인화 기능, 기본 쇼핑몰 및
-                포트폴리오 템플릿을 제공했습니다. 그 과정에서는 ReactJs와 여러
-                라이브러리를 최소화하고{" "}
-                <SkillDescription>HTML, CSS, JavaScript</SkillDescription>를
-                활용했고 웹 전반에 대한 학습과 경험을 할 수 있었습니다.{" "}
-                <SkillDescription>MS Azure</SkillDescription>로 배포했었고
-                현재는 서비스하고 있지 않습니다. 무엇보다{" "}
+                <br />앱 제작 전체를 담당했습니다.{" "}
+                <SkillDescription>Dart/Flutter</SkillDescription>를 사용해
+                개발을 진행했습니다.{" "}
+                <SkillDescription>REST API와 Web Socket</SkillDescription>을
+                활용한 첫 프로젝트입니다.{" "}
                 <b>
-                    비전문가인 사용자의 경험과 니즈를 많이 고민하고 서비스를
-                    구체화를 경험
+                    웹, 앱 모두 활용되는 서비스 방식과 아키텍쳐에 대해 공부하고
+                    고찰을 시작
                 </b>
-                한 프로젝트입니다.
+                하게된 프로젝트입니다.
             </span>
         ),
         link: "https://github.com/Jun-Jinu/TH_Terminal_app, https://github.com/Jun-Jinu/Turn_house_app ",
         features: [
             {
                 title: "주요 기능",
-                content: "",
+                content:
+                    "독거노인 사고 판단 및 신고, 마을 관리자의 공지(웹소켓 활용) 알림 및 저장, 로그인, 마을 관리, 날씨, 알람, 경고 사이렌, TTS 및 STT",
             },
             { title: "참여 기간", content: "2022.03 ~ 2022.07" },
             {
                 title: "참여 역할",
                 content:
-                    "드래그앤드랍을 활용한 웹 빌더(프론트엔드) 개발, 회원가입 및 로그인 페이지 제작, 컴포넌트 및 기본 템플릿 제작, 다중 페이지 기능 추가 및 적용, 필요에 따라 GraphQL과 REST API를 활용한 서버 연동",
+                    "독거노인 단말기용 앱 개발, 독거노인 보호자 앱 개발, REST API 활용 서버 연동, 웹 페이지 제작 일부 기여",
             },
             {
                 title: "주요 사용 기술 및 서비스",
-                content: "Flutter, ReactJs, Spring Boot, Tensorflow",
+                content: "Flutter, ReactJs, Spring Boot",
             },
         ],
     },

@@ -8,7 +8,7 @@ import Skill from "@/components/common/skill";
 import Career from "@/components/common/career";
 import AboutMe from "@/components/common/about-me";
 import Footer from "@/components/layout/footer";
-import ScrollToTopButton from "@/components/common/scroll-to-top-botton";
+import ScrollToTopButton from "@/components/common/scroll-to-top-button";
 
 import ImgCard from "@/components/common/img-card";
 import Project from "@/components/common/project";
