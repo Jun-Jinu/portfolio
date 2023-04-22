@@ -22,6 +22,10 @@ const NavbarContainer = styled.nav<{ darkMode: boolean }>`
     padding: 1rem;
     width: 100%;
     border-bottom: 1px solid #e1e3e6;
+
+    @media screen and (max-width: 768px) {
+        position: relative;
+    }
 `;
 
 const NavMenuContainer = styled.div`
