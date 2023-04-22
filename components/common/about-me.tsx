@@ -111,6 +111,10 @@ const Bubble = styled.div`
         top: -20px;
         left: 200px;
     }
+
+    @media screen and (max-width: 768px) {
+        font-size: 1rem;
+    }
 `;
 
 const data = [
