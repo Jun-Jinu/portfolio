@@ -9,6 +9,7 @@ import {
     AiOutlineMail,
     AiOutlineHome,
 } from "react-icons/ai";
+
 interface ListItemProps {
     date: string;
     name: string;

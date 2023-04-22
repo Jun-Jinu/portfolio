@@ -31,6 +31,8 @@ const RowContainer = styled.div`
 
 const Image = styled.img`
     margin: 0 auto 20px auto;
+    max-width: 100%;
+    height: auto !important;
 `;
 
 const InfoContainer = styled.div`
@@ -78,33 +80,40 @@ const Features = styled.ul`
     }
 `;
 
+const Spacer = styled.div`
+    height: 50px;
+`;
+
 const ProjectCard = () => (
     <Box>
         {ProjectData.map(
             ({ title, subtitle, imageSrc, description, link, features }) => (
-                <BasicCard key={title}>
-                    <Title>{title}</Title>
-                    <Subtitle>{subtitle}</Subtitle>
-                    <RowContainer>
-                        <Image src={imageSrc} alt={title} />
-                        <InfoContainer>
-                            <Description>{description}</Description>
-                            <b>⚙︎ GitHub</b>
-                            <a href={link}>{link}</a>
-                            {features.map(
-                                ({
-                                    title: featureTitle,
-                                    content: featureContent,
-                                }) => (
-                                    <Features key={title}>
-                                        <b>⚙︎ {featureTitle}</b>
-                                        <p>{featureContent}</p>
-                                    </Features>
-                                )
-                            )}
-                        </InfoContainer>
-                    </RowContainer>
-                </BasicCard>
+                <>
+                    <BasicCard key={title}>
+                        <Title>{title}</Title>
+                        <Subtitle>{subtitle}</Subtitle>
+                        <RowContainer>
+                            <Image src={imageSrc} alt={title} />
+                            <InfoContainer>
+                                <Description>{description}</Description>
+                                <b>⚙︎ GitHub</b>
+                                <a href={link}>{link}</a>
+                                {features.map(
+                                    ({
+                                        title: featureTitle,
+                                        content: featureContent,
+                                    }) => (
+                                        <Features key={title}>
+                                            <b>⚙︎ {featureTitle}</b>
+                                            <p>{featureContent}</p>
+                                        </Features>
+                                    )
+                                )}
+                            </InfoContainer>
+                        </RowContainer>
+                    </BasicCard>
+                    <Spacer />
+                </>
             )
         )}
     </Box>

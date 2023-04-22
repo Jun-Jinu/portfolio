@@ -11,7 +11,7 @@ const StyledAccordion = styled.details`
     color: #333;
     border: 1px solid #d9d9d9;
     border-radius: 4px;
-    margin: 10px;
+    margin: 20px 0;
 `;
 
 const Title = styled.summary`
@@ -33,7 +33,8 @@ const Title = styled.summary`
 `;
 
 const Content = styled.div`
-    padding: 1rem;
+    padding: 1.5rem;
+    font-size: 1.1rem;
     border: 1px solid #d9d9d9;
     border-top: none;
     background-color: #f7f7f7;

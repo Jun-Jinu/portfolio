@@ -46,25 +46,36 @@ const Name = styled.p`
     font-size: 20px;
 `;
 
+const Career = () => {
+    const items: ListItemProps[] = [
+        { date: "2022.01 ~ present", name: "1" },
+        { date: "2019.03 ~ 2021.12", name: "2" },
+    ];
+
+    return (
+        <ColumnContainer>
+            <Title>📝Career</Title>
+            <RowContainer>
+                {/* <Image src="https://placehold.it/300x500" alt="career" /> */}
+                <List>
+                    {items.map((item, index) => (
+                        <ListItem
+                            key={index}
+                            date={item.date}
+                            name={item.name}
+                        />
+                    ))}
+                </List>
+            </RowContainer>
+        </ColumnContainer>
+    );
+};
+
 const ListItem = ({ date, name }: ListItemProps) => (
     <RowContainer>
         <Date>{date}</Date>
         <Name>{name}</Name>
     </RowContainer>
-);
-
-const Career = ({ items }: { items: ListItemProps[] }) => (
-    <ColumnContainer>
-        <Title>📝Career</Title>
-        <RowContainer>
-            <Image src="https://placehold.it/300x500" alt="career" />
-            <List>
-                {items.map((item, index) => (
-                    <ListItem key={index} date={item.date} name={item.name} />
-                ))}
-            </List>
-        </RowContainer>
-    </ColumnContainer>
 );
 
 export default Career;

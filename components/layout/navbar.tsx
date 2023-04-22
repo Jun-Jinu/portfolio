@@ -29,6 +29,10 @@ const NavMenuContainer = styled.div`
     justify-content: space-evenly;
     align-items: center;
     width: 60%;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `;
 
 const NavLeftContainer = styled.div`
@@ -155,9 +159,9 @@ const Navbar = ({
                     )}
                 </NavButton>
 
-                <NavButton onClick={toggleLang} isDarkMode={darkMode}>
+                {/* <NavButton onClick={toggleLang} isDarkMode={darkMode}>
                     {lang === "eng" ? "ENG" : "KOR"}
-                </NavButton>
+                </NavButton> */}
             </NavRightContainer>
         </NavbarContainer>
     );

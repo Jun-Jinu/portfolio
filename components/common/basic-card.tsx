@@ -5,14 +5,13 @@ const BasicCard = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-width: 450px;
     width: 100%;
     height: auto;
     background-color: #fff;
     border-radius: 12px;
     padding: 25px;
-    margin-bottom: 50px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-    overflow: hidden;
     transition: all 0.2s ease-in-out;
 
     &:hover {

@@ -48,6 +48,7 @@ export default function Home() {
             <main>
                 <Introduce />
                 <AboutMe />
+                {/* <Career /> */}
                 <Skill />
                 <Project />
             </main>
