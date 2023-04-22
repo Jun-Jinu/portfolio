@@ -10,6 +10,14 @@ const Box = styled.div`
     justify-content: center;
 `;
 
+const ColumnContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
 const Title = styled.h2`
     font-size: 48px;
     color: #333;
@@ -87,8 +95,8 @@ const ProjectCard = () => (
     <Box>
         {ProjectData.map(
             ({ title, subtitle, imageSrc, description, link, features }) => (
-                <>
-                    <BasicCard key={title}>
+                <ColumnContainer key={title}>
+                    <BasicCard>
                         <Title>{title}</Title>
                         <Subtitle>{subtitle}</Subtitle>
                         <RowContainer>
@@ -112,7 +120,7 @@ const ProjectCard = () => (
                         </RowContainer>
                     </BasicCard>
                     <Spacer />
-                </>
+                </ColumnContainer>
             )
         )}
     </Box>
