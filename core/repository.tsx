@@ -148,7 +148,9 @@ export const ProjectData: Project[] = [
                 진행했습니다. 독거노인의 고독사 문제 해결책을 찾으며
                 개발했습니다.
                 <br />
-                <br />앱 제작 전체를 담당했습니다.{" "}
+                <br />
+                서비스 개발에는 웹, 앱, 서버, 머신러닝 분야에서 개발이
+                진행됐으며 앱 제작 전체를 담당했습니다.{" "}
                 <SkillDescription>Dart/Flutter</SkillDescription>를 사용해
                 개발을 진행했습니다.{" "}
                 <SkillDescription>REST API와 Web Socket</SkillDescription>을
@@ -160,7 +162,7 @@ export const ProjectData: Project[] = [
                 하게된 프로젝트입니다.
             </span>
         ),
-        link: "https://github.com/Jun-Jinu/TH_Terminal_app, https://github.com/Jun-Jinu/Turn_house_app ",
+        link: "https://github.com/Jun-Jinu/Turn_house_app ",
         features: [
             {
                 title: "주요 기능",
