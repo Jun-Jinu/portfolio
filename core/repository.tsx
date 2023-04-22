@@ -1,8 +1,33 @@
 import styled from "styled-components";
 
+import {
+    AiOutlineUser,
+    AiOutlineCalendar,
+    AiOutlineBook,
+    AiOutlinePhone,
+    AiOutlineMail,
+    AiOutlineHome,
+} from "react-icons/ai";
 const SkillDescription = styled.span`
     color: #0d6efa;
 `;
+
+export const myInfo = [
+    { icon: <AiOutlineUser />, label: "이름", value: "전진우" },
+    {
+        icon: <AiOutlineCalendar />,
+        label: "생년월일",
+        value: "1998년 7월 19일",
+    },
+    { icon: <AiOutlineHome />, label: "주소", value: "서울특별시 광진구" },
+    {
+        icon: <AiOutlineBook />,
+        label: "학력",
+        value: "세종대학교 컴퓨터공학과 졸업",
+    },
+    { icon: <AiOutlinePhone />, label: "전화번호", value: "010-7620-9128" },
+    { icon: <AiOutlineMail />, label: "이메일", value: "soa9719@naver.com" },
+];
 
 export const ProjectData = [
     {

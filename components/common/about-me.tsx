@@ -2,14 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import BasicCard from "./basic-card";
 import ImgCard from "./img-card";
-import {
-    AiOutlineUser,
-    AiOutlineCalendar,
-    AiOutlineBook,
-    AiOutlinePhone,
-    AiOutlineMail,
-    AiOutlineHome,
-} from "react-icons/ai";
+import { myInfo } from "@/core/repository";
 import { FaGithub } from "react-icons/fa";
 
 interface ListItemProps {
@@ -119,23 +112,6 @@ const Bubble = styled.div`
     }
 `;
 
-const data = [
-    { icon: <AiOutlineUser />, label: "이름", value: "전진우" },
-    {
-        icon: <AiOutlineCalendar />,
-        label: "생년월일",
-        value: "1998년 7월 19일",
-    },
-    { icon: <AiOutlineHome />, label: "주소", value: "서울특별시 광진구" },
-    {
-        icon: <AiOutlineBook />,
-        label: "학력",
-        value: "세종대학교 컴퓨터공학과 졸업",
-    },
-    { icon: <AiOutlinePhone />, label: "전화번호", value: "010-7620-9128" },
-    { icon: <AiOutlineMail />, label: "이메일", value: "soa9719@naver.com" },
-];
-
 const AboutMe = () => (
     <>
         <Title id="about-me">📌 저를 소개합니다</Title>
@@ -144,7 +120,7 @@ const AboutMe = () => (
                 <RowContainer>
                     <Image src="/images/my_img.jpeg" alt="전진우 프로필 사진" />
                     <InfoContainer>
-                        {data.map(({ icon, label, value }) => (
+                        {myInfo.map(({ icon, label, value }) => (
                             <Info key={label}>
                                 <Icon>{icon}</Icon>
                                 <InfoDetail>
