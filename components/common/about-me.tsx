@@ -9,62 +9,88 @@ import {
     AiOutlineMail,
     AiOutlineHome,
 } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
+
 interface ListItemProps {
     date: string;
     name: string;
 }
 
 const ColumnContainer = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 
 const RowContainer = styled.div`
     width: 100%;
     display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
 `;
 
 const Title = styled.h2`
     color: #333;
     font-size: 28px;
     margin: 18px;
+
+    scroll-margin-top: 120px;
 `;
 
 const Image = styled.img`
-    margin: 25px;
+    margin: 0 auto 20px auto;
     width: 400px;
-    height: 500px;
+    max-width: 100%;
+    height: auto !important;
 `;
 
 const InfoContainer = styled.div`
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    color: #333;
-    margin: 25px;
-`;
-
-const Label = styled.div`
     display: flex;
-    text-align: center;
-    align-items: center;
-    font-size: 28px;
-    font-weight: bold;
+    flex-direction: row;
+    color: #333;
+    flex-wrap: wrap;
 
-    margin-bottom: 6px;
+    width: 600px;
+    margin: 0 auto;
 `;
 
-const Value = styled.p`
-    font-size: 21px;
-    color: #555;
-    margin-left: 72px;
+const Info = styled.div`
+    width: 300px;
+    display: flex;
+    color: #333;
+
+    margin: 12px auto;
 `;
 
-const Icon = styled.span`
+const InfoDetail = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const Icon = styled.div`
     font-size: 52px;
     margin-right: 16px;
 `;
+
+const Label = styled.div`
+    font-size: 21px;
+    color: #666;
+`;
+
+const Value = styled.div`
+    font-size: 28px;
+    font-weight: bold;
+    color: #555;
+`;
+
+const GithubContainer = styled.div`
+    display: flex;
+    margin-top: 12px;
+`;
+
 const Bubble = styled.div`
     font-size: 1.4rem;
     position: relative;
@@ -95,32 +121,57 @@ const data = [
         value: "1998년 7월 19일",
     },
     { icon: <AiOutlineHome />, label: "주소", value: "서울특별시 광진구" },
-    { icon: <AiOutlineBook />, label: "학력", value: "세종대학교 졸업" },
+    {
+        icon: <AiOutlineBook />,
+        label: "학력",
+        value: "세종대학교 컴퓨터공학과 졸업",
+    },
     { icon: <AiOutlinePhone />, label: "전화번호", value: "010-7620-9128" },
     { icon: <AiOutlineMail />, label: "이메일", value: "soa9719@naver.com" },
 ];
 
 const AboutMe = () => (
-    <ColumnContainer>
-        <Title>📌About Me</Title>
-        <BasicCard>
-            <RowContainer>
-                <Image src="/images/my_img.jpeg" alt="전진우 프로필 사진" />
-                <InfoContainer>
-                    {data.map(({ icon, label, value }) => (
-                        <div key={label}>
-                            <Label>
+    <>
+        <Title id="about-me">📌About Me</Title>
+        <ColumnContainer>
+            <BasicCard>
+                <RowContainer>
+                    <Image src="/images/my_img.jpeg" alt="전진우 프로필 사진" />
+                    <InfoContainer>
+                        {data.map(({ icon, label, value }) => (
+                            <Info key={label}>
                                 <Icon>{icon}</Icon>
-                                {label}
-                            </Label>
-                            <Value>{value}</Value>
-                        </div>
-                    ))}
-                </InfoContainer>
-            </RowContainer>
-        </BasicCard>
-        <Bubble>안녕하세요!</Bubble>
-    </ColumnContainer>
+                                <InfoDetail>
+                                    <Label>{label}</Label>
+
+                                    <Value>{value}</Value>
+                                </InfoDetail>
+                            </Info>
+                        ))}
+                        <GithubContainer>
+                            <Icon>
+                                <FaGithub />
+                            </Icon>
+                            <InfoDetail>
+                                <Label>깃허브[링크]</Label>
+                                <Value>
+                                    <a href="https://github.com/Jun-Jinu">
+                                        https://github.com/Jun-Jinu
+                                    </a>
+                                </Value>
+                            </InfoDetail>
+                        </GithubContainer>
+                    </InfoContainer>
+                </RowContainer>
+            </BasicCard>
+            <Bubble>
+                안녕하세요! <b>웹 및 앱 풀스택 개발자</b>입니다. 실무 경력은
+                없지만 새로운 것을 배우기도 하며 알고 있는 것을 공유하며 활용해
+                보는 것을 좋아합니다. 특히 다양한 코딩을 즐기는 것이 저의
+                장점입니다.
+            </Bubble>
+        </ColumnContainer>
+    </>
 );
 
 export default AboutMe;

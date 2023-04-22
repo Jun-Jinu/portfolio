@@ -11,7 +11,7 @@ const StyledAccordion = styled.details`
     color: #333;
     border: 1px solid #d9d9d9;
     border-radius: 4px;
-    margin: 10px;
+    margin: 20px 0;
 `;
 
 const Title = styled.summary`
@@ -30,15 +30,11 @@ const Title = styled.summary`
     &:hover {
         background-color: #f5f5f5;
     }
-
-    &:focus-visible {
-        background-color: #e6f7ff;
-        outline: none;
-    }
 `;
 
 const Content = styled.div`
-    padding: 1rem;
+    padding: 1.5rem;
+    font-size: 1.1rem;
     border: 1px solid #d9d9d9;
     border-top: none;
     background-color: #f7f7f7;
@@ -50,7 +46,7 @@ const Icon = styled.svg<{ isOpen: boolean }>`
     fill: #333;
     transition: transform 0.2s ease-in-out;
 
-    ${({ isOpen }) => !isOpen && "transform: rotate(180deg);"}
+    ${({ isOpen }) => isOpen && "transform: rotate(180deg);"}
 `;
 
 const Accordion = ({ title, content }: AccordionProps) => {
@@ -61,8 +57,8 @@ const Accordion = ({ title, content }: AccordionProps) => {
     };
 
     return (
-        <StyledAccordion open={isOpen}>
-            <Title onClick={handleClick}>
+        <StyledAccordion onClick={handleClick}>
+            <Title>
                 {title}
                 <Icon isOpen={isOpen} viewBox="0 0 24 24">
                     <path
