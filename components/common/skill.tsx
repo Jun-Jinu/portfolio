@@ -15,6 +15,8 @@ const Title = styled.h2`
     color: #333;
     font-size: 28px;
     margin: 18px;
+
+    scroll-margin-top: 120px;
 `;
 
 const Container = styled.div`
@@ -117,7 +119,7 @@ export default function SkillList() {
 
     return (
         <Container>
-            <Title>🛠️ 사용한 기술들</Title>
+            <Title id="skill">🛠️ 사용한 기술들</Title>
             {skills.map((skill, index) => (
                 <Accordian
                     key={index}

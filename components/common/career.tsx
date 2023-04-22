@@ -19,6 +19,8 @@ const Title = styled.h2`
     color: #333;
     font-size: 28px;
     margin: 18px;
+
+    scroll-margin-top: 120px;
 `;
 
 const Image = styled.img`

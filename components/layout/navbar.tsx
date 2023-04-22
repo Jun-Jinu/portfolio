@@ -55,7 +55,7 @@ const NavMenuLink = styled.b<{ isDarkMode: boolean }>`
     cursor: pointer;
     transition: color 0.2s ease-in-out;
     font-size: 20px;
-    padding: 28px 0;
+    padding: 18px 0;
 
     &:hover {
         color: ${({ isDarkMode }) => (isDarkMode ? "#ccc" : "#666")};
@@ -92,26 +92,48 @@ const Navbar = ({
     lang,
     toggleLang,
 }: NavbarProps) => {
+    const scrollToMenu = (menuName: string) => {
+        const menu = document.querySelector("#" + menuName);
+        menu!.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest",
+        });
+    };
+
     return (
         <NavbarContainer darkMode={darkMode}>
             <NavLeftContainer>
-                <Link href="/jinu" passHref>
-                    <NavMainLink isDarkMode={darkMode}>JINU</NavMainLink>
-                </Link>
+                <NavMainLink
+                    isDarkMode={darkMode}
+                    onClick={() => scrollToMenu("about-me")}
+                >
+                    JUN JINU
+                </NavMainLink>
             </NavLeftContainer>
             <NavMenuContainer>
-                <Link href="/Aboutme" passHref>
-                    <NavMenuLink isDarkMode={darkMode}>About Me</NavMenuLink>
-                </Link>
-                <Link href="/skills" passHref>
-                    <NavMenuLink isDarkMode={darkMode}>Skills</NavMenuLink>
-                </Link>
-                <Link href="/career" passHref>
-                    <NavMenuLink isDarkMode={darkMode}>Career</NavMenuLink>
-                </Link>
-                <Link href="/projects" passHref>
-                    <NavMenuLink isDarkMode={darkMode}>Projects</NavMenuLink>
-                </Link>
+                <NavMenuLink
+                    isDarkMode={darkMode}
+                    onClick={() => scrollToMenu("about-me")}
+                >
+                    About Me
+                </NavMenuLink>
+
+                <NavMenuLink
+                    isDarkMode={darkMode}
+                    onClick={() => scrollToMenu("skill")}
+                >
+                    Skills
+                </NavMenuLink>
+
+                {/* <NavMenuLink isDarkMode={darkMode}>Career</NavMenuLink> */}
+
+                <NavMenuLink
+                    isDarkMode={darkMode}
+                    onClick={() => scrollToMenu("projects")}
+                >
+                    Projects
+                </NavMenuLink>
             </NavMenuContainer>
             <NavRightContainer>
                 <NavButton onClick={toggleDarkMode} isDarkMode={darkMode}>

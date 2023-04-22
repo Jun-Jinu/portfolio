@@ -10,6 +10,7 @@ const Title = styled.h2`
     color: #333;
     font-size: 28px;
     margin: 18px;
+    scroll-margin-top: 120px;
 `;
 
 const CardContainer = styled.div`
@@ -19,7 +20,7 @@ const CardContainer = styled.div`
 export default function Project() {
     return (
         <Container>
-            <Title>📌 진행한 프로젝트</Title>
+            <Title id="projects">📌 진행한 프로젝트</Title>
             <CardContainer>
                 <ProjectCard></ProjectCard>
                 {/* <ImgCard
