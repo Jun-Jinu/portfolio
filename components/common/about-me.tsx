@@ -152,7 +152,6 @@ const AboutMe = () => (
                             </Icon>
                             <InfoDetail>
                                 <Label>깃허브[링크]</Label>
-
                                 <Value>
                                     <a href="https://github.com/Jun-Jinu">
                                         https://github.com/Jun-Jinu
@@ -164,9 +163,10 @@ const AboutMe = () => (
                 </RowContainer>
             </BasicCard>
             <Bubble>
-                안녕하세요! 웹 및 앱 풀스택 개발자입니다. 실무 경력은 없지만
-                새로운 것을 배우기도 하며 알고 있는 것을 공유하며 활용해 보는
-                것을 좋아합니다. 특히 코딩을 즐기는 것이 저의 장점입니다.
+                안녕하세요! <b>웹 및 앱 풀스택 개발자</b>입니다. 실무 경력은
+                없지만 새로운 것을 배우기도 하며 알고 있는 것을 공유하며 활용해
+                보는 것을 좋아합니다. 특히 다양한 코딩을 즐기는 것이 저의
+                장점입니다.
             </Bubble>
         </ColumnContainer>
     </>
