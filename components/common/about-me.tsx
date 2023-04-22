@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import BasicCard from "./basic-card";
+import ImgCard from "./img-card";
 import {
     AiOutlineUser,
     AiOutlineCalendar,
@@ -28,6 +29,7 @@ const RowContainer = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 50px;
     flex-wrap: wrap;
 `;
@@ -136,7 +138,7 @@ const data = [
 
 const AboutMe = () => (
     <>
-        <Title id="about-me">📌About Me</Title>
+        <Title id="about-me">📌 저를 소개합니다</Title>
         <ColumnContainer>
             <BasicCard>
                 <RowContainer>
@@ -169,11 +171,37 @@ const AboutMe = () => (
                 </RowContainer>
             </BasicCard>
             <Bubble>
-                안녕하세요! <b>웹 및 앱 풀스택 개발자</b>입니다. 실무 경력은
-                없지만 새로운 것을 배우기도 하며 알고 있는 것을 공유하며 활용해
-                보는 것을 좋아합니다. 특히 다양한 코딩을 즐기는 것이 저의
+                <b>웹 풀스택 개발자 전진우</b>입니다. 실무 경력은 없지만 새로운
+                것을 배우며 알고 있는 것을 공유하며 넓혀가는 활동을 보는 것을
+                좋아합니다. 또한 다양한 코딩을 취미로 즐기는 것이 저의
                 장점입니다.
             </Bubble>
+            <RowContainer>
+                <ImgCard
+                    category={["주로 사용했던 기술"]}
+                    title={"ReactJs, Flutter"}
+                    tag={[
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "SCSS",
+                        "Recoil",
+                        "Dart",
+                    ]}
+                />
+                <ImgCard
+                    category={["주로 학습중인 기술"]}
+                    title={"NextJs, Spring Boot"}
+                    tag={[
+                        "TypeScript",
+                        "Java",
+                        "JPA",
+                        "MYSQL",
+                        "AWS",
+                        "GraphQL",
+                    ]}
+                />
+            </RowContainer>
         </ColumnContainer>
     </>
 );

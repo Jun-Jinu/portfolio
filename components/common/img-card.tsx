@@ -4,7 +4,6 @@ interface CardProps {
     category: string[];
     title: string;
     tag: string[];
-    image: string;
 }
 
 const Container = styled.div`
@@ -12,13 +11,12 @@ const Container = styled.div`
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    width: 100%;
-    max-width: 300px;
+    flex: 1;
+    min-width: 300px;
     height: auto;
     background-color: #fff;
     border-radius: 12px;
     margin-right: 18px;
-    margin-bottom: 54px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
     overflow: hidden;
     transition: all 0.2s ease-in-out;
@@ -59,13 +57,14 @@ const Title = styled.h2`
 
 const TagContainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
 `;
 
 const TagText = styled.p`
     font-size: 16px;
     font-weight: 400;
     color: #909499;
-    margin: 0 8px 20px 0;
+    margin: 0 8px 4px 0;
 `;
 
 const Bubble = styled.div`
@@ -84,7 +83,7 @@ const BubbleText = styled.p`
     margin: 0;
 `;
 
-const ImgCard = ({ category, title, tag, image }: CardProps) => {
+const ImgCard = ({ category, title, tag }: CardProps) => {
     return (
         <Container>
             <TextContainer>
@@ -104,8 +103,6 @@ const ImgCard = ({ category, title, tag, image }: CardProps) => {
                     ))}
                 </TagContainer>
             </TextContainer>
-
-            <Image src={image} alt={title} />
         </Container>
     );
 };

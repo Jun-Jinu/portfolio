@@ -59,7 +59,7 @@ const NavMenuLink = styled.b<{ isDarkMode: boolean }>`
     cursor: pointer;
     transition: color 0.2s ease-in-out;
     font-size: 20px;
-    padding: 18px 0;
+    padding: 14px 0;
 
     &:hover {
         color: ${({ isDarkMode }) => (isDarkMode ? "#ccc" : "#666")};
@@ -71,7 +71,7 @@ const NavMainLink = styled.b<{ isDarkMode: boolean }>`
     cursor: pointer;
     transition: color 0.2s ease-in-out;
     font-size: 28px;
-    padding: 24px 0;
+    padding: 7px 0;
 
     &:hover {
         color: ${({ isDarkMode }) => (isDarkMode ? "#ccc" : "#666")};
@@ -120,14 +120,14 @@ const Navbar = ({
                     isDarkMode={darkMode}
                     onClick={() => scrollToMenu("about-me")}
                 >
-                    About Me
+                    저를 소개합니다
                 </NavMenuLink>
 
                 <NavMenuLink
                     isDarkMode={darkMode}
                     onClick={() => scrollToMenu("skill")}
                 >
-                    Skills
+                    사용한 기술들
                 </NavMenuLink>
 
                 {/* <NavMenuLink isDarkMode={darkMode}>Career</NavMenuLink> */}
@@ -136,10 +136,10 @@ const Navbar = ({
                     isDarkMode={darkMode}
                     onClick={() => scrollToMenu("projects")}
                 >
-                    Projects
+                    진행했던 프로젝트
                 </NavMenuLink>
             </NavMenuContainer>
-            <NavRightContainer>
+            {/* <NavRightContainer>
                 <NavButton onClick={toggleDarkMode} isDarkMode={darkMode}>
                     {darkMode ? (
                         // 해 이미지
@@ -185,10 +185,10 @@ const Navbar = ({
                     )}
                 </NavButton>
 
-                {/* <NavButton onClick={toggleLang} isDarkMode={darkMode}>
+                <NavButton onClick={toggleLang} isDarkMode={darkMode}>
                     {lang === "eng" ? "ENG" : "KOR"}
-                </NavButton> */}
-            </NavRightContainer>
+                </NavButton>
+            </NavRightContainer> */}
         </NavbarContainer>
     );
 };
