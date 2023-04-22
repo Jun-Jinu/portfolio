@@ -23,6 +23,7 @@ const Subtitle = styled.h3`
 `;
 
 const RowContainer = styled.div`
+    width: 100%;
     display: flex;
     align-items: center;
     margin-bottom: 50px;
@@ -40,10 +41,8 @@ const InfoContainer = styled.div`
     flex-direction: column;
     color: #333;
 
-    width: 500px;
-
-    padding: 0 50px;
-
+    max-width: 500px;
+    padding: 0 auto;
     margin: 0 auto;
 
     b {

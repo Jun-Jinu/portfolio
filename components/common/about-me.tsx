@@ -16,13 +16,19 @@ interface ListItemProps {
 }
 
 const ColumnContainer = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 
 const RowContainer = styled.div`
     width: 100%;
     display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
 `;
 
 const Title = styled.h2`
@@ -32,24 +38,25 @@ const Title = styled.h2`
 `;
 
 const Image = styled.img`
-    margin: 25px;
-    width: 400px;
-    height: 500px;
+    margin: 0 auto 20px auto;
+    max-width: 100%;
+    height: auto !important;
 `;
 
 const InfoContainer = styled.div`
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    display: flex;
     color: #333;
-    margin: 25px;
+    flex-wrap: wrap;
+
+    width: 500px;
+    padding: 0 50px;
+    margin: 0 auto;
 `;
 
 const Label = styled.div`
-    display: flex;
-    text-align: center;
-    align-items: center;
+    // display: flex;
+    // text-align: center;
+    // align-items: center;
     font-size: 28px;
     font-weight: bold;
 
@@ -59,13 +66,14 @@ const Label = styled.div`
 const Value = styled.p`
     font-size: 21px;
     color: #555;
-    margin-left: 72px;
+    // margin-left: 72px;
 `;
 
 const Icon = styled.span`
     font-size: 52px;
     margin-right: 16px;
 `;
+
 const Bubble = styled.div`
     font-size: 1.4rem;
     position: relative;
@@ -102,26 +110,28 @@ const data = [
 ];
 
 const AboutMe = () => (
-    <ColumnContainer>
+    <>
         <Title>📌About Me</Title>
-        <BasicCard>
-            <RowContainer>
-                <Image src="/images/my_img.jpeg" alt="전진우 프로필 사진" />
-                <InfoContainer>
-                    {data.map(({ icon, label, value }) => (
-                        <div key={label}>
-                            <Label>
-                                <Icon>{icon}</Icon>
-                                {label}
-                            </Label>
-                            <Value>{value}</Value>
-                        </div>
-                    ))}
-                </InfoContainer>
-            </RowContainer>
-        </BasicCard>
-        <Bubble>안녕하세요!</Bubble>
-    </ColumnContainer>
+        <ColumnContainer>
+            <BasicCard>
+                <RowContainer>
+                    <Image src="/images/my_img.jpeg" alt="전진우 프로필 사진" />
+                    <InfoContainer>
+                        {data.map(({ icon, label, value }) => (
+                            <div key={label}>
+                                <Label>
+                                    <Icon>{icon}</Icon>
+                                    {label}
+                                </Label>
+                                <Value>{value}</Value>
+                            </div>
+                        ))}
+                    </InfoContainer>
+                </RowContainer>
+            </BasicCard>
+            <Bubble>안녕하세요!</Bubble>
+        </ColumnContainer>
+    </>
 );
 
 export default AboutMe;
