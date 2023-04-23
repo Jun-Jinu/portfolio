@@ -118,7 +118,10 @@ const AboutMe = () => (
         <ColumnContainer>
             <BasicCard>
                 <RowContainer>
-                    <Image src="/images/my_img.jpeg" alt="전진우 프로필 사진" />
+                    <Image
+                        src="/images/junjinu.jpeg"
+                        alt="전진우 프로필 사진"
+                    />
                     <InfoContainer>
                         {myInfo.map(({ icon, label, value }) => (
                             <Info key={label}>

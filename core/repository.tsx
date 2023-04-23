@@ -57,7 +57,12 @@ export const ProjectData: Project[] = [
     {
         title: "포트폴리오 사이트",
         subtitle: "[WEB] 1인 프로젝트",
-        imageSrc: ["https://placehold.it/400x500"],
+        imageSrc: [
+            "/images/portfolio/portfolio_1.png",
+            "/images/portfolio/portfolio_2.png",
+            "/images/portfolio/portfolio_3.png",
+            "/images/portfolio/portfolio_4.png",
+        ],
         description: (
             <span>
                 현재 웹사이트입니다. 포트폴리오로 사용하기 위해 개발을 진행한
@@ -148,7 +153,15 @@ export const ProjectData: Project[] = [
         //여기 수정중
         title: "집켜줘",
         subtitle: "[WEB, APP] 4인 프로젝트",
-        imageSrc: ["https://placehold.it/400x500"],
+        imageSrc: [
+            "/images/turnhouse/turnhouse_7.png",
+            "/images/turnhouse/turnhouse_1.png",
+            "/images/turnhouse/turnhouse_2.png",
+            "/images/turnhouse/turnhouse_3.png",
+            "/images/turnhouse/turnhouse_4.png",
+            "/images/turnhouse/turnhouse_5.png",
+            "/images/turnhouse/turnhouse_6.png",
+        ],
         description: (
             <span>
                 독거노인 사고대응 솔루션입니다. 세종대학교
