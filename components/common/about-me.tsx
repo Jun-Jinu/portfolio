@@ -83,7 +83,8 @@ const Value = styled.div`
 
 const GithubContainer = styled.div`
     display: flex;
-    margin-top: 12px;
+    width: 300px;
+    margin: 30px auto 0 auto;
 `;
 
 const Bubble = styled.div`
@@ -128,12 +129,11 @@ const AboutMe = () => (
                                 <Icon>{icon}</Icon>
                                 <InfoDetail>
                                     <Label>{label}</Label>
-
                                     <Value>{value}</Value>
                                 </InfoDetail>
                             </Info>
                         ))}
-                        <GithubContainer>
+                        <Info>
                             <Icon>
                                 <FaGithub />
                             </Icon>
@@ -145,7 +145,7 @@ const AboutMe = () => (
                                     </a>
                                 </Value>
                             </InfoDetail>
-                        </GithubContainer>
+                        </Info>
                     </InfoContainer>
                 </RowContainer>
             </BasicCard>

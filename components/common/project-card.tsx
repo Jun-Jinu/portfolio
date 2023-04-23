@@ -177,8 +177,13 @@ const ProjectCard = () => {
                                 </CarouselContainer>
                                 <InfoContainer>
                                     <Description>{description}</Description>
+
                                     <b>⚙︎ GitHub</b>
-                                    <a href={link}>{link}</a>
+                                    {link.map((linkSrc) => (
+                                        <a key={linkSrc} href={linkSrc}>
+                                            {linkSrc}
+                                        </a>
+                                    ))}
                                     {features.map(
                                         ({
                                             title: featureTitle,

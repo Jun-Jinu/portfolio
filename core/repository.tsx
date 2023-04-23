@@ -27,7 +27,7 @@ interface Project {
     subtitle: string;
     imageSrc: string[];
     description: any;
-    link: string;
+    link: string[];
     features: projectFeatures[];
 }
 interface Skill {
@@ -78,7 +78,7 @@ export const ProjectData: Project[] = [
                 가벼운 배포를 경험했습니다.
             </span>
         ),
-        link: "https://github.com/Jun-Jinu/myPortfolio",
+        link: ["https://github.com/Jun-Jinu/myPortfolio"],
         features: [
             {
                 title: "주요 기능",
@@ -129,7 +129,7 @@ export const ProjectData: Project[] = [
                 한 프로젝트입니다.
             </span>
         ),
-        link: "https://github.com/SejongDDS",
+        link: ["https://github.com/SejongDDS"],
         features: [
             {
                 title: "주요 기능",
@@ -183,7 +183,10 @@ export const ProjectData: Project[] = [
                 하게된 프로젝트입니다.
             </span>
         ),
-        link: "https://github.com/Jun-Jinu/Turn_house_app ",
+        link: [
+            "https://github.com/Jun-Jinu/Turn_house_app",
+            "https://github.com/Jun-Jinu/TH_Terminal_app",
+        ],
         features: [
             {
                 title: "주요 기능",
@@ -210,12 +213,15 @@ export const skillData: Skill[] = [
         name: "HTML / CSS / JavaScript",
         description: (
             <p>
-                <b>JavaScript</b> 학부과정을 통해 기본적인 웹개발의 과정을
+                <b>JavaScript:</b> 학부과정을 통해 기본적인 웹개발의 과정을
                 실습하며 학습하였습니다. 2023년 상반기{" "}
                 <b>D-coding 심화 스터디</b>에 참가하며 ReactJs와 비교하여
                 JavaScript로 간단한 TodoList앱을 만들며 클로저, 스코프, 실행
                 컨텍스트를 비롯한 관련된 개념을 학습하며 가상돔 구성, 컴포넌트
-                단위 렌더링을 위한 옵저버 패턴 구현을 진행했습니다. <br />
+                단위 렌더링을 위한 옵저버 패턴 구현을 진행했습니다. 또한
+                코드리뷰를 받으며 현업에서 고려해야할 코딩 관련 원칙들에 대한
+                정보를 얻고 학습을 진행하기도 했습니다.
+                <br />
                 <br />
                 최근 리액트를 비롯한 JavaScript를 사용하는 라이브러리 혹은
                 프레임워크 사용시 개발에 제약이 없는 수준있는 개발자가 되기위해
@@ -252,16 +258,25 @@ export const skillData: Skill[] = [
     {
         name: "ReactJs / Recoil / NextJs",
         description: (
-            <p>
-                학부 과정에서 집켜줘, SDDS 프로젝트에 참가하며 ReactJs를 학습과
-                활용을 병행했습니다. 또한 지난 2월부터 진행한 D-Coding 스터디에
-                Frontend React Project Study의 멘토로 참가하며 대학생 멘티들을
-                대상으로 강의 자료를 만들고 강의을 진행하며 기본 지식을 점검하고
-                보충하기도 했습니다. 또한 심화스터디에 참가하며 기존 가볍게
-                공부하던 JavaScript에 대한 지식을 보충하며 ReactJs 등
-                프레임워크에 대한 활용 방법, 함수 네이밍, 현업에서 고려해야할
-                코딩 관련 원칙들에 대한 정보를 얻고 학습을 진행하기도 했습니다.
-            </p>
+            <span>
+                <p>
+                    <b>ReactJs / Recoil: </b>학부 과정에서 집켜줘, SDDS
+                    프로젝트에 참가하며 ReactJs를 학습과 활용을 병행했습니다.
+                    또한 지난 2월부터 진행한 D-Coding 스터디에 Frontend React
+                    Project Study의 멘토로 참가하며 대학생 멘티들을 대상으로
+                    강의 자료를 만들고 강의을 진행하며 기본 지식을 점검하고
+                    보충하기도 했습니다.
+                </p>
+                <br />
+                <p>
+                    <b>NextJs: </b>학부 과정 수료후 다양한 서비스에 대한 공부를
+                    하며 사용자에게 제공되는 서비스에서 광고, SEO의 중요성을
+                    깨닫고 어떤 방식으로 검색엔진에 최적화 하는지,
+                    포털사이트마다 어떻게 다른 기준이 있는지에 대해 탐구하고
+                    있습니다. 현재 중점적으로 학습하고 추후에 프로젝트에
+                    적용하고싶은 프레임워크입니다.
+                </p>
+            </span>
         ),
         category: "Frontend",
     },
@@ -276,9 +291,9 @@ export const skillData: Skill[] = [
                     분야 특성상 웹 개발에 한정되었습니다. 폭 넓은 서비스를
                     구현해보고 싶어 방학을 통해 개별로 학습을 진행했습니다.
                     스터디를 통해서 Dart 언어 문법, Flutter 프레임워크 사용법에
-                    대해서 익혔습니다. 이후에 집켜줘, Danvery, ForInTrip
-                    프로젝트를 통해서 앱 개발을 진행하며 프로젝트에 기여함과
-                    동시에 서비스 개발 경험을 쌓았습니다.
+                    대해서 익혔습니다. 이후에 집켜줘, Danvery 프로젝트를 통해서
+                    앱 개발을 진행하며 프로젝트에 기여함과 동시에 서비스 개발
+                    경험을 쌓았습니다.
                 </p>
             </span>
         ),
@@ -309,6 +324,25 @@ export const skillData: Skill[] = [
         category: "Backend",
     },
     {
+        name: "Spring Boot / JSP",
+        description: (
+            <span>
+                <p>
+                    <b>Spring Boot, JSP:</b> 기존 자바스크립트로 개발이 가능한
+                    백엔드 프레임워크인 NestJs를 주로 학습했지만 국내 개발
+                    빈도가 Spring Boot에 중점이 맞춰져있다는 점에 한계를 느꼈고
+                    JAVA를 복습하며 Spring Boot, JSP를 통해 간단한 JWT를 활용한
+                    로그인, 회원가입, 일정 관리 기능 REST API를 만들며 학습을
+                    진행하고 있습니다. 아직 숙련도가 많이 낮은 언어와
+                    프레임워크라고 할 수 있지만 그만큼 핵심적으로 학습하고 있고
+                    NestJs와 비슷한 구조와 기능의 프레임워크이므로 빠르게
+                    적응하고 코딩을 진행하고 있습니다.
+                </p>
+            </span>
+        ),
+        category: "Backend",
+    },
+    {
         name: "MYSQL",
         description: (
             <p>
@@ -326,47 +360,119 @@ export const skillData: Skill[] = [
     {
         name: "AWS(EC2, S3, Route53)",
         description: (
-            <div>
-                <div></div>
-            </div>
+            <p>
+                <b>AWS(EC2, S3, Route53):</b> 학부 과정 중 서버 연동이 필요한
+                프로젝트를 수행할 때 AWS를 통해서 서비스를 구현했습니다. DNS도
+                연동하면서 실제 서비스를 제공하기 위한 기본적인 과정을 경험하며
+                클라우드에 대해 이해하고 추후에 유용하게 사용할 수 있도록
+                학습하고 있습니다.{" "}
+            </p>
         ),
         category: "Deployment",
     },
     {
         name: "Vercel",
-        description:
-            "웹 포트폴리오 프로젝트에서 NextJs의 포트폴리오 배포를 진행했습니다. AWS의 설정과 무료라는 장점으로 빠르게 배포를 하는데 사용했습니다.",
+        description: (
+            <p>
+                <b>Vercel: </b>웹 포트폴리오 프로젝트에서 NextJs의 포트폴리오
+                배포를 진행했습니다. lean한 배포 가능, 무료라는 장점으로 빠르게
+                웹페이지를 공유하는데 사용했습니다.
+            </p>
+        ),
         category: "Deployment",
     },
 
     // Communication
     {
         name: "Figma / Notion",
-        description:
-            "집켜줘, SDDS 프로젝트를 참가하며 지속적인 소통 및 아카이빙의 중요성을 느끼며 Notion을 활용해 진행 상황을 공유하고 추후 대화가 필요한 부분을 기록하며 진행했습니다. 사용자에게 맡닿아 있는 프론트엔드 작업을 할 때의 와이어프레임, 백엔드 설계를 위한 클래스, 시퀀스, 유스케이스, ERD 다이어그램 작성을 진행하며 Figma를 비롯한 여러 부수적인 툴을 활용했습니다.",
+        description: (
+            <span>
+                <p>
+                    <b>Figma: </b>사용자에게 맡닿아 있는 프론트엔드 작업을 할
+                    때의 와이어프레임, 백엔드 설계를 위한 클래스, 시퀀스,
+                    유스케이스, ERD 다이어그램 작성을 진행하며 Figma를 비롯한
+                    여러 부수적인 툴을 활용했습니다.
+                </p>
+                <br />
+                <p>
+                    <b>Notion: </b> 집켜줘, SDDS 프로젝트를 참가하며 지속적인
+                    소통 및 아카이빙의 중요성을 느끼며 Notion을 주로 활용해 진행
+                    상황을 공유하고 추후 대화가 필요한 부분을 기록하며
+                    진행했습니다.
+                </p>
+            </span>
+        ),
+
         category: "Communication",
     },
     // Tool
     {
         name: "VS Code / DataGrip / Android Studio / Postman",
-        description:
-            "다양한 프로그래밍에 활용할 수 있는 VS Code를 주로 사용하며 유용한 확장 기능을 찾고 적용해보며 코딩하는 것을 좋아합니다. MYSQL을 통해서 DB를 다룰경우 DataGrip을 사용해서 백엔드 작업을 진행합니다. Flutter 프레임워크를 활용해 안드로이드 앱 개발을 진행시 안드로이드 기기 테스트시 애뮬레이터를 활용할 때 사용했습니다, REST API, GraphQL을 활용한 서버 연동 작업에서의 테스트 및 디버깅을 위해 포스트맨을 사용했습니다.",
+        description: (
+            <span>
+                <p>
+                    <b>VS Code:</b> 다양한 프로그래밍에 활용할 수 있는 VS Code를
+                    주로 사용하며 유용한 확장 기능을 찾고 적용해보며 코딩하는
+                    것을 좋아합니다.
+                </p>
+                <br />
+                <p>
+                    <b>DataGrip: </b>MYSQL을 통해서 DB를 다룰경우 백엔드 작업을
+                    진행합니다.
+                </p>
+                <br />
+                <p>
+                    <b>Android Studio: </b>Flutter 프레임워크를 활용해
+                    안드로이드 앱 개발을 진행시 안드로이드 기기 테스트시
+                    애뮬레이터를 활용할 때 사용했습니다.
+                </p>
+                <br />
+                <p>
+                    <b>Postman: </b>REST API, GraphQL을 활용한 서버 연동
+                    작업에서의 테스트 및 디버깅을 위해 포스트맨을 사용했습니다.
+                </p>
+            </span>
+        ),
         category: "Tool",
     },
 
     //Version Control
     {
         name: "GitHub",
-        description:
-            "프로젝트 및 스터디에 참가하며 버전 관리, 코드 리뷰을 주기적으로 진행했습니다. 개인프로젝트도 Git을 통해서 저장하는 습관을 들였습니다.",
+        description: (
+            <span>
+                <p>
+                    <b>GitHub:</b> 프로젝트 및 스터디에 참가하며 버전 관리, 코드
+                    리뷰을 주기적으로 진행했습니다. 개인프로젝트도 Git을 통해서
+                    저장하는 습관을 들였습니다. 2022년 하반기부터 커밋 컨벤션의
+                    중요성을 알고 지속적으로 올바른 커밋을 남기고자 노력하고
+                    있습니다.
+                </p>
+            </span>
+        ),
+
         category: "Version Control",
     },
 
     //Certificate
     {
         name: "정보처리기사 / 워드 / 컴활2급",
-        description:
-            "전반적인 컴퓨팅 지식을 향상하고자 정보처리기사 자격증을 취득하며 학부과정에서 얻은 지식을 점검했습니다. 군 복무 중 기본적인 사무 업무 능력의 필요성을 느꼈고 워드프로세서, 컴활2급(엑셀)에 대한 기능들을 점검하며 자격증을 취득했습니다.",
+        description: (
+            <span>
+                <p>
+                    <b>정보처리기사:</b> 전반적인 컴퓨팅 지식을 향상하고자
+                    자격증을 취득하며 학부과정에서 얻은 지식을 점검했습니다.
+                    또한 가볍게 여기거나 익숙하지 않던 네트워크, 데이터베이스
+                    등의 지식을 보충했습니다.
+                </p>
+                <br />
+                <p>
+                    <b>워드 / 컴활2급:</b> 군 복무 중 기본적인 사무 업무 능력의
+                    필요성을 느꼈고 워드프로세서, 컴활2급(엑셀)에 대한 기능들을
+                    점검하며 자격증을 취득했습니다.
+                </p>
+            </span>
+        ),
         category: "Certificate",
     },
 ];
