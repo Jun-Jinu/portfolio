@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 
 import Navbar from "@/components/layout/navbar";
+import Main from "@/components/layout/main";
 import Introduce from "@/components/common/introduce";
 import Skill from "@/components/common/skill";
 import Career from "@/components/common/career";
@@ -10,7 +10,6 @@ import AboutMe from "@/components/common/about-me";
 import Footer from "@/components/layout/footer";
 import ScrollToTopButton from "@/components/common/scroll-to-top-button";
 
-import ImgCard from "@/components/common/img-card";
 import Project from "@/components/common/project";
 
 export default function Home() {
@@ -45,13 +44,13 @@ export default function Home() {
                 lang={lang}
                 toggleLang={toggleLang}
             />
-            <main>
+            <Main>
                 <Introduce />
                 <AboutMe />
                 {/* <Career /> */}
                 <Skill />
                 <Project />
-            </main>
+            </Main>
             <Footer />
             <ScrollToTopButton />
         </>
