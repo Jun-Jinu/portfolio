@@ -42,6 +42,7 @@ const Box = styled.div`
 
 const ColumnContainer = styled.div`
     width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,24 +71,22 @@ const RowContainer = styled.div`
 
 const CarouselContainer = styled.div`
     width: 460px;
+    min-width: 40%;
     max-width: 100%;
     height: auto;
     margin: 0 auto 40px auto;
 `;
 
-const Image = styled.img`
-    margin: auto;
-
-    width: 460px;
-    max-width: 100%;
-`;
+const Image = styled.img``;
 
 const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     color: #333;
 
-    max-width: 500px;
+    width: 460px;
+    min-width: 40%;
+    max-width: 100%;
     padding: 0 auto;
     margin: 0 auto;
 
