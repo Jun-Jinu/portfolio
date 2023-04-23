@@ -83,7 +83,8 @@ const Value = styled.div`
 
 const GithubContainer = styled.div`
     display: flex;
-    margin-top: 12px;
+    width: 300px;
+    margin: 30px auto 0 auto;
 `;
 
 const Bubble = styled.div`
@@ -118,19 +119,21 @@ const AboutMe = () => (
         <ColumnContainer>
             <BasicCard>
                 <RowContainer>
-                    <Image src="/images/my_img.jpeg" alt="전진우 프로필 사진" />
+                    <Image
+                        src="/images/junjinu.jpeg"
+                        alt="전진우 프로필 사진"
+                    />
                     <InfoContainer>
                         {myInfo.map(({ icon, label, value }) => (
                             <Info key={label}>
                                 <Icon>{icon}</Icon>
                                 <InfoDetail>
                                     <Label>{label}</Label>
-
                                     <Value>{value}</Value>
                                 </InfoDetail>
                             </Info>
                         ))}
-                        <GithubContainer>
+                        <Info>
                             <Icon>
                                 <FaGithub />
                             </Icon>
@@ -142,15 +145,15 @@ const AboutMe = () => (
                                     </a>
                                 </Value>
                             </InfoDetail>
-                        </GithubContainer>
+                        </Info>
                     </InfoContainer>
                 </RowContainer>
             </BasicCard>
             <Bubble>
                 <b>웹 풀스택 개발자 전진우</b>입니다. 실무 경력은 없지만 새로운
-                것을 배우며 알고 있는 것을 공유하며 넓혀가는 활동을 보는 것을
-                좋아합니다. 또한 다양한 코딩을 취미로 즐기는 것이 저의
-                장점입니다.
+                것을 배우며 알고 있는 것을 공유하고 넓혀가는 활동을 중요성을
+                느끼고 적극적으로 발전하고자 합니다. 또한 다양한 코딩을 취미로
+                즐기는 것이 저의 장점입니다.
             </Bubble>
             <RowContainer>
                 <ImgCard
