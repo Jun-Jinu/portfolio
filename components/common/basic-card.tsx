@@ -5,7 +5,6 @@ const BasicCard = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 450px;
     width: 100%;
     height: auto;
     background-color: #fff;
@@ -17,6 +16,10 @@ const BasicCard = styled.div`
     &:hover {
         transform: translateY(-5px);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 25px 15px;
     }
 `;
 

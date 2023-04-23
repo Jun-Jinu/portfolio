@@ -47,17 +47,26 @@ const InfoContainer = styled.div`
     flex-direction: row;
     color: #333;
     flex-wrap: wrap;
-
     width: 600px;
     margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
 `;
 
 const Info = styled.div`
     width: 300px;
+
     display: flex;
     color: #333;
 
     margin: 12px auto;
+    // overflow: scroll;
+    @media screen and (max-width: 768px) {
+        max-width: 70vw;
+    }
 `;
 
 const InfoDetail = styled.div`
@@ -68,17 +77,28 @@ const InfoDetail = styled.div`
 const Icon = styled.div`
     font-size: 52px;
     margin-right: 16px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 26px;
+        margin-right: 8px;
+    }
 `;
 
 const Label = styled.div`
     font-size: 21px;
     color: #666;
+    @media screen and (max-width: 768px) {
+        font-size: 10.5px;
+    }
 `;
 
 const Value = styled.div`
     font-size: 28px;
     font-weight: bold;
     color: #555;
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
 `;
 
 const GithubContainer = styled.div`
@@ -105,11 +125,21 @@ const Bubble = styled.div`
         content: "";
         position: absolute;
         top: -20px;
-        left: 200px;
+        left: 22%;
     }
 
     @media screen and (max-width: 768px) {
         font-size: 1rem;
+        &:after {
+            left: 45%;
+        }
+    }
+`;
+
+const Spacer = styled.div`
+    width: 20px;
+    @media screen and (max-width: 768px) {
+        width: 0;
     }
 `;
 
@@ -168,6 +198,7 @@ const AboutMe = () => (
                         "Dart",
                     ]}
                 />
+                <Spacer />
                 <ImgCard
                     category={["주로 학습중인 기술"]}
                     title={"NextJs, Spring Boot"}
