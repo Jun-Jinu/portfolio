@@ -186,10 +186,10 @@ const ProjectCard = () => {
                                     ))}
                                     {features.map(
                                         ({
-                                            title: featureTitle,
+                                            featureTitle: featureTitle,
                                             content: featureContent,
                                         }) => (
-                                            <Features key={title}>
+                                            <Features key={featureTitle}>
                                                 <b>⚙︎ {featureTitle}</b>
                                                 <p>{featureContent}</p>
                                             </Features>

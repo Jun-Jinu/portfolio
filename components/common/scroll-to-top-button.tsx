@@ -26,9 +26,9 @@ const ArrowIcon = () => (
         viewBox="0 0 50 50"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
     >
         <path
             d="M8.467 16.933L0 8.467 8.467 0M.085 8.467L19.918 8.534"

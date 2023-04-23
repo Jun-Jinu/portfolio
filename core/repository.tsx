@@ -19,7 +19,7 @@ interface Info {
 }
 
 interface projectFeatures {
-    title: string;
+    featureTitle: string;
     content: string;
 }
 interface Project {
@@ -81,13 +81,13 @@ export const ProjectData: Project[] = [
         link: ["https://github.com/Jun-Jinu/myPortfolio"],
         features: [
             {
-                title: "주요 기능",
+                featureTitle: "주요 기능",
                 content: "본인 소개, 기술 스택, 관련 링크, 프로젝트 기록",
             },
-            { title: "참여 기간", content: "2023.04 ~" },
-            { title: "참여 역할", content: "전체 기획 및 개발" },
+            { featureTitle: "참여 기간", content: "2023.04 ~" },
+            { featureTitle: "참여 역할", content: "전체 기획 및 개발" },
             {
-                title: "주요 사용 기술",
+                featureTitle: "주요 사용 기술",
                 content: "NextJs, TypeScript, styled-components, netlify",
             },
         ],
@@ -132,18 +132,18 @@ export const ProjectData: Project[] = [
         link: ["https://github.com/SejongDDS"],
         features: [
             {
-                title: "주요 기능",
+                featureTitle: "주요 기능",
                 content:
                     "회원가입, 로그인, 드래그앤드랍을 활용한 웹빌더, 코드 저장, 만든 웹 페이지 도메인 설정 및 웹 생성, 다양한 Navbar와 Button 등의 컴포넌트와 만들어진 스타일 프리셋 제공, 여러 페이지 설정 및 라우팅 설정 제공, 쇼핑몰과 포트폴리오 페이지 기본 템플릿 제공, 쇼핑몰 사이트 생성시 회원 및 상품 관리를 위한 관리자 페이지 연결 및 제공",
             },
-            { title: "참여 기간", content: "2022.08 ~ 2022.12" },
+            { featureTitle: "참여 기간", content: "2022.08 ~ 2022.12" },
             {
-                title: "참여 역할",
+                featureTitle: "참여 역할",
                 content:
                     "드래그앤드랍을 활용한 웹 빌더(프론트엔드) 개발, 회원가입 및 로그인 페이지 제작, 컴포넌트 및 기본 템플릿 제작, 다중 페이지 기능 추가 및 적용, 필요에 따라 GraphQL과 REST API를 활용한 서버 연동",
             },
             {
-                title: "주요 사용 기술 및 서비스",
+                featureTitle: "주요 사용 기술 및 서비스",
                 content:
                     "HTML, CSS, JavaScript, SASS(SCSS), ReactJs, styled-components, GrapesJs, TypeScript, NestJs, MS Azure, Gabia",
             },
@@ -189,18 +189,18 @@ export const ProjectData: Project[] = [
         ],
         features: [
             {
-                title: "주요 기능",
+                featureTitle: "주요 기능",
                 content:
                     "독거노인 사고 판단 및 신고, 마을 관리자의 공지(웹소켓 활용) 알림 및 저장, 로그인, 마을 관리, 날씨, 알람, 경고 사이렌, TTS 및 STT",
             },
-            { title: "참여 기간", content: "2022.03 ~ 2022.07" },
+            { featureTitle: "참여 기간", content: "2022.03 ~ 2022.07" },
             {
-                title: "참여 역할",
+                featureTitle: "참여 역할",
                 content:
                     "독거노인 단말기용 앱 개발, 독거노인 보호자 앱 개발, REST API 활용 서버 연동, 웹 페이지 제작 일부 기여",
             },
             {
-                title: "주요 사용 기술 및 서비스",
+                featureTitle: "주요 사용 기술 및 서비스",
                 content: "Flutter, ReactJs, Spring Boot",
             },
         ],
