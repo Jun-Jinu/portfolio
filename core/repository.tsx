@@ -25,7 +25,7 @@ interface projectFeatures {
 interface Project {
     title: string;
     subtitle: string;
-    imageSrc: string;
+    imageSrc: string[];
     description: any;
     link: string;
     features: projectFeatures[];
@@ -57,7 +57,7 @@ export const ProjectData: Project[] = [
     {
         title: "포트폴리오 사이트",
         subtitle: "[WEB] 1인 프로젝트",
-        imageSrc: "https://placehold.it/400x500",
+        imageSrc: ["https://placehold.it/400x500"],
         description: (
             <span>
                 현재 웹사이트입니다. 포트폴리오로 사용하기 위해 개발을 진행한
@@ -90,7 +90,15 @@ export const ProjectData: Project[] = [
     {
         title: "SDDS",
         subtitle: "[Web] 4인 프로젝트",
-        imageSrc: "https://placehold.it/400x500",
+        imageSrc: [
+            "/images/sdds/sdds_1.png",
+            "/images/sdds/sdds_2.png",
+            "/images/sdds/sdds_3.png",
+            "/images/sdds/sdds_4.png",
+            "/images/sdds/sdds_5.png",
+            "/images/sdds/sdds_6.png",
+            "/images/sdds/sdds_7.png",
+        ],
         description: (
             <span>
                 Drag & Drop 웹빌더 Saas 프로그램 오픈소스 프로젝트입니다. 교내
@@ -140,10 +148,10 @@ export const ProjectData: Project[] = [
         //여기 수정중
         title: "집켜줘",
         subtitle: "[WEB, APP] 4인 프로젝트",
-        imageSrc: "https://placehold.it/400x500",
+        imageSrc: ["https://placehold.it/400x500"],
         description: (
             <span>
-                독거노인 사고대응 솔루션 서비스입니다. 세종대학교
+                독거노인 사고대응 솔루션입니다. 세종대학교
                 캡스톤(졸업작품)과목을 통해 ATEC과 협업하여 프로젝트를
                 진행했습니다. 독거노인의 고독사 문제 해결책을 찾으며
                 개발했습니다.
@@ -187,42 +195,117 @@ export const skillData: Skill[] = [
     // Frontend
     {
         name: "HTML / CSS / JavaScript",
-        description:
-            "학부과정을 통해 기본적인 개발을 학습하였습니다. 최근 D-coding 심화 스터디에 참가하며 ReactJs와 비교하여 JavaScript로 간단한 TodoList앱을 만들며 클로저, 스코프, 실행 컨텍스트를 비롯한 관련된 개념을 학습하며 가상돔 구성, 컴포넌트 단위 렌더링을 위한 옵저버 패턴 구현을 진행했습니다. 특히 최근 리액트 사용시에도 JavaScript에 익숙하고 사용잘하는 개발자가 되기위해 꾸준히 학습하고 있습니다.",
+        description: (
+            <p>
+                <b>JavaScript</b> 학부과정을 통해 기본적인 웹개발의 과정을
+                실습하며 학습하였습니다. 2023년 상반기{" "}
+                <b>D-coding 심화 스터디</b>에 참가하며 ReactJs와 비교하여
+                JavaScript로 간단한 TodoList앱을 만들며 클로저, 스코프, 실행
+                컨텍스트를 비롯한 관련된 개념을 학습하며 가상돔 구성, 컴포넌트
+                단위 렌더링을 위한 옵저버 패턴 구현을 진행했습니다. <br />
+                <br />
+                최근 리액트를 비롯한 JavaScript를 사용하는 라이브러리 혹은
+                프레임워크 사용시 개발에 제약이 없는 수준있는 개발자가 되기위해
+                꾸준히 학습하고 있습니다.
+            </p>
+        ),
         category: "Frontend",
     },
     {
         name: "SASS(SCSS) / TypeScript",
-        description:
-            "퍼블리싱 작업을 수월하게 하기위해서 (*.scss)확장자를 사용하는 SCSS를 활용하며 SDDS 프로젝트에 참가하였습니다. 팀 프로젝트에서 사용하면서 가독성면에서 매력을 느껴 지속적으로 SCSS를 활용하여 웹 개발을 진행하고 있습니다. 또한 아직까지는 엄청 큰 규모의 프로젝트 진행 경험이 없어 타입스크립트의 필요성을 많이 느끼지 못했지만 새로운 프레임워크 사용, 현재보다 큰 팀 프로젝트를 위해서 개인 프로젝트를 통해서 학습하고 있습니다. 아직 능숙하다고는 하지 못하지만 기본적인 활용한 가능한 수준입니다. 다만 현재 중점적으로 학습중인 언어이므로 빠르게 숙련도를 높이고 있습니다.",
+        description: (
+            <span>
+                <p>
+                    <b>SASS(SCSS):</b> 퍼블리싱 작업을 수월하게 하기위해서
+                    (*.scss)확장자를 사용하는 SCSS를 활용하며 SDDS 프로젝트에
+                    참가하였습니다. 해당 팀 프로젝트에서 사용하면서 가독성면에서
+                    매력을 느껴 지속적으로 SCSS를 활용하여 웹 개발을 진행하고
+                    있습니다.
+                </p>
+                <br />
+                <p>
+                    <b>TypeScript:</b> 아직까지는 엄청 큰 규모의 프로젝트 진행
+                    경험이 없어 타입스크립트의 필요성을 많이 느끼지 못했지만
+                    새로운 프레임워크 사용, 현재보다 큰 팀 프로젝트를 위해서
+                    개인 프로젝트를 통해서 학습하고 있습니다. 아직 능숙하다고는
+                    하지 못하지만 기본적인 문법은 활용한 가능한 수준입니다. 다만
+                    현재 중점적으로 학습중인 언어이므로 빠르게 숙련도를 높이고
+                    있습니다.
+                </p>
+            </span>
+        ),
         category: "Frontend",
     },
     {
         name: "ReactJs / Recoil / NextJs",
-        description:
-            "학부 과정에서 집켜줘, SDDS 프로젝트에 참가하며 ReactJs를 학습과 활용을 병행했습니다. 또한 지난 2월부터 진행한 D-Coding 스터디에 Frontend React Project Study의 멘토로 참가하며 대학생 멘티들을 대상으로 강의 자료를 만들고 강의을 진행하며 기본 지식을 점검하고 보충하기도 했습니다. 또한 심화스터디에 참가하며 기존 가볍게 공부하던 JavaScript에 대한 지식을 보충하며 ReactJs 등 프레임워크에 대한 활용 방법, 함수 네이밍, 현업에서 고려해야할 코딩 관련 원칙들에 대한 정보를 얻고 학습을 진행하기도 했습니다.",
+        description: (
+            <p>
+                학부 과정에서 집켜줘, SDDS 프로젝트에 참가하며 ReactJs를 학습과
+                활용을 병행했습니다. 또한 지난 2월부터 진행한 D-Coding 스터디에
+                Frontend React Project Study의 멘토로 참가하며 대학생 멘티들을
+                대상으로 강의 자료를 만들고 강의을 진행하며 기본 지식을 점검하고
+                보충하기도 했습니다. 또한 심화스터디에 참가하며 기존 가볍게
+                공부하던 JavaScript에 대한 지식을 보충하며 ReactJs 등
+                프레임워크에 대한 활용 방법, 함수 네이밍, 현업에서 고려해야할
+                코딩 관련 원칙들에 대한 정보를 얻고 학습을 진행하기도 했습니다.
+            </p>
+        ),
         category: "Frontend",
     },
 
     // Mobile App
     {
         name: "Dart / Flutter",
-        description:
-            "스터디를 통해서 Dart 언어 문법, Flutter 프레임워크 사용법에 대해서 익혔습니다. 집켜줘, Danvery, ForInTrip 프로젝트를 통해서 앱 개발을 진행하며 개발 경험을 쌓았습니다.",
+        description: (
+            <span>
+                <p>
+                    <b>Dart / Flutter:</b> 학과의 교육과정과 주변 학우의 개발
+                    분야 특성상 웹 개발에 한정되었습니다. 폭 넓은 서비스를
+                    구현해보고 싶어 방학을 통해 개별로 학습을 진행했습니다.
+                    스터디를 통해서 Dart 언어 문법, Flutter 프레임워크 사용법에
+                    대해서 익혔습니다. 이후에 집켜줘, Danvery, ForInTrip
+                    프로젝트를 통해서 앱 개발을 진행하며 프로젝트에 기여함과
+                    동시에 서비스 개발 경험을 쌓았습니다.
+                </p>
+            </span>
+        ),
         category: "Mobile App",
     },
 
     // Backend
     {
         name: "NestJs / Prisma",
-        description:
-            "백엔드 구현을 위해 TypeScript와 함께 사용해 기본적인 REST API을 구현 가능하며 회원가입, 로그인 기능을 구현해보며 프레임워크 전체의 기능을 익혔습니다. 최근 흔히 쓰이는 Spring Boot와 구조가 비슷하다는 점에서 호기심이 생겨 학습하고 있습니다. 또한 ORM인 prisma를 사용하며 직접 쿼리문으로 데이터베이스를 구성하지 않고 NestJs내에서 관리하는 방법에 대해 구현하며 익혔습니다. 아직 능숙하게 사용하지 못함을 느껴 지속적으로 학습하고 있습니다.",
+        description: (
+            <span>
+                <p>
+                    <b>NestJs:</b> 백엔드 구현을 위해 TypeScript와 함께 사용해
+                    기본적인 REST API을 구현 가능하며 회원가입, 로그인 기능을
+                    구현해보며 프레임워크 전체의 기능을 익혔습니다. 최근 흔히
+                    쓰이는 Spring Boot와 구조가 비슷하다는 점에서 호기심이 생겨
+                    학습하고 있습니다.
+                </p>
+                <br />
+                <p>
+                    <b>Prisma:</b> ORM인 prisma를 사용하며 직접 쿼리문으로
+                    데이터베이스를 구성하지 않고 NestJs내에서 관리하는 방법에
+                    대해 구현하며 익혔습니다. 아직 능숙하게 사용하지 못함을 느껴
+                    지속적으로 학습하고 있습니다.
+                </p>
+            </span>
+        ),
         category: "Backend",
     },
     {
         name: "MYSQL",
-        description:
-            "백엔드 서비스를 구현하는 과정에서 학부과정에서 배운 SQL 쿼리 작성법을 복습하며 관련 개념들, 사용법을 익히고 있습니다.",
+        description: (
+            <p>
+                <b>MYSQL:</b> 백엔드 서비스를 구현하는 과정에서 학부과정에서
+                배운 SQL 쿼리 작성법을 복습하며 관련 개념들, 사용법을 익히고
+                있습니다. 정보처리기사 자격증 취득과정에서 복습한 경험이 있지만
+                아직 많이 부족하다고 생각해 1인 프로젝트를 진행해보며 능숙하게
+                다룰 수 있도록 노력하고 있습니다.
+            </p>
+        ),
         category: "Backend",
     },
 
