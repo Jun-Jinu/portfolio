@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { useState } from "react";
 interface NavbarProps {
     darkMode: boolean;
     toggleDarkMode: () => void;
@@ -88,6 +88,52 @@ const NavButton = styled.button<{ isDarkMode: boolean }>`
         color: ${({ isDarkMode }) => (isDarkMode ? "#ccc" : "#666")};
     }
 `;
+const HamburgerButton = styled.button`
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        box-sizing: border-box;
+
+        &:focus {
+            outline: none;
+        }
+
+        span {
+            width: 30px;
+            height: 3px;
+            background: #000;
+            transition: all 0.2s ease-in-out;
+            position: relative;
+            transform-origin: 5px 0px;
+        }
+
+        .open span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 0px;
+            left: 0px;
+        }
+
+        .open span:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+        }
+
+        .open span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 0px;
+            left: 0px;
+        }
+    }
+`;
 
 const Navbar = ({
     darkMode,
@@ -104,6 +150,8 @@ const Navbar = ({
         });
     };
 
+    const [open, setOpen] = useState(false);
+
     return (
         <NavbarContainer darkMode={darkMode}>
             <NavLeftContainer>
@@ -113,6 +161,34 @@ const Navbar = ({
                 >
                     JUN JINU
                 </NavMainLink>
+                {open ? (
+                    <div>
+                        <div
+                            style={{
+                                width: "100%",
+                                height: "50px",
+                                backgroundColor: "red",
+                            }}
+                        ></div>
+                        <div
+                            style={{
+                                width: "100%",
+                                height: "50px",
+                                backgroundColor: "green",
+                            }}
+                        ></div>
+                        <div
+                            style={{
+                                width: "100%",
+                                height: "50px",
+                                backgroundColor: "blue",
+                            }}
+                        ></div>
+                        <h1>123</h1>
+                    </div>
+                ) : (
+                    <div></div>
+                )}
             </NavLeftContainer>
             <NavMenuContainer>
                 <NavMenuLink
@@ -138,8 +214,8 @@ const Navbar = ({
                     진행했던 프로젝트
                 </NavMenuLink>
             </NavMenuContainer>
-            {/* <NavRightContainer>
-                <NavButton onClick={toggleDarkMode} isDarkMode={darkMode}>
+            <NavRightContainer>
+                {/* <NavButton onClick={toggleDarkMode} isDarkMode={darkMode}>
                     {darkMode ? (
                         // 해 이미지
                         <svg
@@ -186,8 +262,16 @@ const Navbar = ({
 
                 <NavButton onClick={toggleLang} isDarkMode={darkMode}>
                     {lang === "eng" ? "ENG" : "KOR"}
-                </NavButton>
-            </NavRightContainer> */}
+                </NavButton> */}
+                <HamburgerButton
+                    className={open ? "open" : ""}
+                    onClick={() => setOpen(!open)}
+                >
+                    <span />
+                    <span />
+                    <span />
+                </HamburgerButton>
+            </NavRightContainer>
         </NavbarContainer>
     );
 };
