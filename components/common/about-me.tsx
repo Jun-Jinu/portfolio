@@ -1,14 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import BasicCard from "./card/basic-card";
-import ImgCard from "./img-card";
+import ImgCard from "./card/img-card";
 import { myInfo } from "@/core/repository";
 import { FaGithub } from "react-icons/fa";
-
-interface ListItemProps {
-    date: string;
-    name: string;
-}
 
 const ColumnContainer = styled.div`
     width: 100%;
@@ -99,12 +94,6 @@ const Value = styled.div`
     @media screen and (max-width: 768px) {
         font-size: 14px;
     }
-`;
-
-const GithubContainer = styled.div`
-    display: flex;
-    width: 300px;
-    margin: 30px auto 0 auto;
 `;
 
 const Bubble = styled.div`
