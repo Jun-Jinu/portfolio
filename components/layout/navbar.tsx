@@ -1,7 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
 import { useState } from "react";
-import { FaTimes } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
 
 interface NavbarProps {
     darkMode: boolean;
@@ -43,16 +41,20 @@ const NavMenuContainer = styled.div`
 
 const NavLeftContainer = styled.div`
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 20%;
+    margin-left: 100px;
+
+    width: 30%;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 5px;
+    }
 `;
 
 const NavRightContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 20%;
+    width: 10%;
 `;
 
 const NavMenuLink = styled.b<{ isDarkMode: boolean }>`
@@ -69,14 +71,17 @@ const NavMenuLink = styled.b<{ isDarkMode: boolean }>`
 `;
 const NavMainLink = styled.b<{ isDarkMode: boolean }>`
     color: ${({ isDarkMode }) => (isDarkMode ? "#f9f9f9" : "#333")};
-    margin: 0 1rem;
     cursor: pointer;
     transition: color 0.2s ease-in-out;
     font-size: 28px;
-    padding: 7px 0;
+    padding: 0.25rem 0;
 
     &:hover {
         color: ${({ isDarkMode }) => (isDarkMode ? "#ccc" : "#666")};
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
     }
 `;
 
@@ -92,42 +97,6 @@ const NavButton = styled.button<{ isDarkMode: boolean }>`
     }
 `;
 
-const HamburgerButton = styled(GiHamburgerMenu)`
-    display: none;
-
-    @media screen and (max-width: 768px) {
-        display: flex;
-        font-size: 35px;
-        background: transparent;
-        cursor: pointer;
-        padding: 0;
-        box-sizing: border-box;
-
-        &:focus {
-            outline: none;
-        }
-    }
-`;
-
-const CancelIcon = styled(FaTimes)`
-    display: none;
-
-    @media screen and (max-width: 768px) {
-        display: flex;
-        font-size: 35px;
-        background: transparent;
-        cursor: pointer;
-        padding: 0;
-        box-sizing: border-box;
-
-        transition: transform 0.2s ease, background-color 0.5s ease;
-
-        &:focus {
-            outline: none;
-        }
-    }
-`;
-
 const slideDown = keyframes`
     from {
         transform: translateY(-100%);
@@ -138,6 +107,8 @@ const slideDown = keyframes`
 `;
 
 const Container = styled.div<{ open: boolean }>`
+    color: #fff;
+    background-color: #3b3c3e;
     position: fixed;
     top: 0;
     left: 0;
@@ -159,28 +130,41 @@ const StyledComponent = styled.div`
     width: 100%;
     padding: 14px 0;
     font-size: 20px;
-    background-color: #f9f9f9;
-    color: #333;
 `;
 
 const HamburgerWrapper = styled.div`
-    width: 40px;
-    height: 30px;
+    display: none;
+    width: 25px;
+    height: 12px;
     position: relative;
     cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        box-sizing: border-box;
+        z-index: 999;
+
+        &:focus {
+            outline: none;
+        }
+    }
 `;
+
 type HamburgerLineProps = {
     firstLine?: boolean;
     secondLine?: boolean;
     thirdLine?: boolean;
     fourthLine?: boolean;
-    active?: boolean;
+    openMenu?: boolean;
 };
 
 const HamburgerLine = styled.span<HamburgerLineProps>`
     display: block;
     position: absolute;
-    height: 4px;
+    height: 3px;
     width: 100%;
     background: black;
     border-radius: 4px;
@@ -195,20 +179,21 @@ const HamburgerLine = styled.span<HamburgerLineProps>`
     ${({ secondLine }) =>
         secondLine &&
         css`
-            top: 13px;
+            top: 6px;
         `}
   
     ${({ thirdLine }) =>
         thirdLine &&
         css`
-            top: 26px;
+            top: 12px;
         `}
   
-    ${({ active }) =>
-        active &&
+    ${({ openMenu }) =>
+        openMenu &&
         css`
             &:nth-child(1) {
-                transform: translateY(13px) rotate(45deg);
+                background: #fff;
+                transform: translateY(6px) rotate(45deg);
             }
 
             &:nth-child(2) {
@@ -216,7 +201,8 @@ const HamburgerLine = styled.span<HamburgerLineProps>`
             }
 
             &:nth-child(3) {
-                transform: translateY(-13px) rotate(-45deg);
+                background: #fff;
+                transform: translateY(-6px) rotate(-45deg);
             }
         `}
 `;
@@ -236,11 +222,10 @@ const Navbar = ({
         });
     };
 
-    const [open, setOpen] = useState(false);
-    const [active, setActive] = useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
 
     function handleClick() {
-        setActive(!active);
+        setOpenMenu(!openMenu);
     }
 
     return (
@@ -326,25 +311,15 @@ const Navbar = ({
                 <NavButton onClick={toggleLang} isDarkMode={darkMode}>
                     {lang === "eng" ? "ENG" : "KOR"}
                 </NavButton> */}
-                {/* {open ? (
-                    <CancelIcon onClick={() => setOpen(!open)}></CancelIcon>
-                ) : (
-                    <HamburgerButton
-                        onClick={() => setOpen(!open)}
-                    ></HamburgerButton>
-                )} */}
-
                 <HamburgerWrapper className="hamburger" onClick={handleClick}>
-                    <HamburgerLine firstLine active={active} />
-                    <HamburgerLine secondLine active={active} />
-                    <HamburgerLine thirdLine active={active} />
+                    <HamburgerLine firstLine openMenu={openMenu} />
+                    <HamburgerLine secondLine openMenu={openMenu} />
+                    <HamburgerLine thirdLine openMenu={openMenu} />
                 </HamburgerWrapper>
 
-                {/* {open && (
-                    <Container open={open}>
-                        <StyledComponent>
-                            <CancelIcon onClick={() => setOpen(!open)} />
-                        </StyledComponent>
+                {openMenu && (
+                    <Container open={openMenu}>
+                        <StyledComponent></StyledComponent>
                         <StyledComponent
                             onClick={() => scrollToMenu("about-me")}
                         >
@@ -359,7 +334,7 @@ const Navbar = ({
                             Component 3
                         </StyledComponent>
                     </Container>
-                )} */}
+                )}
             </NavRightContainer>
         </NavbarContainer>
     );
