@@ -1,5 +1,8 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { useState } from "react";
+import { FaTimes } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 interface NavbarProps {
     darkMode: boolean;
     toggleDarkMode: () => void;
@@ -88,17 +91,14 @@ const NavButton = styled.button<{ isDarkMode: boolean }>`
         color: ${({ isDarkMode }) => (isDarkMode ? "#ccc" : "#666")};
     }
 `;
-const HamburgerButton = styled.button`
+
+const HamburgerButton = styled(GiHamburgerMenu)`
     display: none;
 
     @media screen and (max-width: 768px) {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 24px;
+        font-size: 35px;
         background: transparent;
-        border: none;
         cursor: pointer;
         padding: 0;
         box-sizing: border-box;
@@ -106,33 +106,119 @@ const HamburgerButton = styled.button`
         &:focus {
             outline: none;
         }
+    }
+`;
 
-        span {
-            width: 30px;
-            height: 3px;
-            background: #000;
-            transition: all 0.2s ease-in-out;
-            position: relative;
-            transform-origin: 5px 0px;
-        }
+const CancelIcon = styled(FaTimes)`
+    display: none;
 
-        .open span:nth-child(1) {
-            transform: rotate(45deg);
-            top: 0px;
-            left: 0px;
-        }
+    @media screen and (max-width: 768px) {
+        display: flex;
+        font-size: 35px;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        box-sizing: border-box;
 
-        .open span:nth-child(2) {
-            width: 0%;
-            opacity: 0;
-        }
+        transition: transform 0.2s ease, background-color 0.5s ease;
 
-        .open span:nth-child(3) {
-            transform: rotate(-45deg);
-            top: 0px;
-            left: 0px;
+        &:focus {
+            outline: none;
         }
     }
+`;
+
+const slideDown = keyframes`
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+`;
+
+const Container = styled.div<{ open: boolean }>`
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    animation: ${slideDown} 0.4s ease-in-out;
+`;
+
+const MenuBarContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+const StyledComponent = styled.div`
+    width: 100%;
+    padding: 14px 0;
+    font-size: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+`;
+
+const HamburgerWrapper = styled.div`
+    width: 40px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+`;
+type HamburgerLineProps = {
+    firstLine?: boolean;
+    secondLine?: boolean;
+    thirdLine?: boolean;
+    fourthLine?: boolean;
+    active?: boolean;
+};
+
+const HamburgerLine = styled.span<HamburgerLineProps>`
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+
+    ${({ firstLine }) =>
+        firstLine &&
+        css`
+            top: 0;
+        `}
+
+    ${({ secondLine }) =>
+        secondLine &&
+        css`
+            top: 13px;
+        `}
+  
+    ${({ thirdLine }) =>
+        thirdLine &&
+        css`
+            top: 26px;
+        `}
+  
+    ${({ active }) =>
+        active &&
+        css`
+            &:nth-child(1) {
+                transform: translateY(13px) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                transform: scale(0);
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-13px) rotate(-45deg);
+            }
+        `}
 `;
 
 const Navbar = ({
@@ -151,6 +237,11 @@ const Navbar = ({
     };
 
     const [open, setOpen] = useState(false);
+    const [active, setActive] = useState(false);
+
+    function handleClick() {
+        setActive(!active);
+    }
 
     return (
         <NavbarContainer darkMode={darkMode}>
@@ -161,34 +252,6 @@ const Navbar = ({
                 >
                     JUN JINU
                 </NavMainLink>
-                {open ? (
-                    <div>
-                        <div
-                            style={{
-                                width: "100%",
-                                height: "50px",
-                                backgroundColor: "red",
-                            }}
-                        ></div>
-                        <div
-                            style={{
-                                width: "100%",
-                                height: "50px",
-                                backgroundColor: "green",
-                            }}
-                        ></div>
-                        <div
-                            style={{
-                                width: "100%",
-                                height: "50px",
-                                backgroundColor: "blue",
-                            }}
-                        ></div>
-                        <h1>123</h1>
-                    </div>
-                ) : (
-                    <div></div>
-                )}
             </NavLeftContainer>
             <NavMenuContainer>
                 <NavMenuLink
@@ -263,14 +326,40 @@ const Navbar = ({
                 <NavButton onClick={toggleLang} isDarkMode={darkMode}>
                     {lang === "eng" ? "ENG" : "KOR"}
                 </NavButton> */}
-                <HamburgerButton
-                    className={open ? "open" : ""}
-                    onClick={() => setOpen(!open)}
-                >
-                    <span />
-                    <span />
-                    <span />
-                </HamburgerButton>
+                {/* {open ? (
+                    <CancelIcon onClick={() => setOpen(!open)}></CancelIcon>
+                ) : (
+                    <HamburgerButton
+                        onClick={() => setOpen(!open)}
+                    ></HamburgerButton>
+                )} */}
+
+                <HamburgerWrapper className="hamburger" onClick={handleClick}>
+                    <HamburgerLine firstLine active={active} />
+                    <HamburgerLine secondLine active={active} />
+                    <HamburgerLine thirdLine active={active} />
+                </HamburgerWrapper>
+
+                {/* {open && (
+                    <Container open={open}>
+                        <StyledComponent>
+                            <CancelIcon onClick={() => setOpen(!open)} />
+                        </StyledComponent>
+                        <StyledComponent
+                            onClick={() => scrollToMenu("about-me")}
+                        >
+                            Component 1
+                        </StyledComponent>
+                        <StyledComponent onClick={() => scrollToMenu("skill")}>
+                            Component 2
+                        </StyledComponent>
+                        <StyledComponent
+                            onClick={() => scrollToMenu("projects")}
+                        >
+                            Component 3
+                        </StyledComponent>
+                    </Container>
+                )} */}
             </NavRightContainer>
         </NavbarContainer>
     );
