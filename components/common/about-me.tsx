@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import BasicCard from "./basic-card";
+import BasicCard from "./card/basic-card";
 import ImgCard from "./img-card";
 import { myInfo } from "@/core/repository";
 import { FaGithub } from "react-icons/fa";

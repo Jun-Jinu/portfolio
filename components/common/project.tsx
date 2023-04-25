@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ProjectCard from "./project-card";
+import ProjectCard from "./card/project-card";
 
 const Container = styled.div`
     background-color: #f9f9f9;
