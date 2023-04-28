@@ -323,15 +323,15 @@ const Navbar = ({
                         <StyledComponent
                             onClick={() => scrollToMenu("about-me")}
                         >
-                            Component 1
+                            저를 소개합니다
                         </StyledComponent>
                         <StyledComponent onClick={() => scrollToMenu("skill")}>
-                            Component 2
+                            사용한 기술들
                         </StyledComponent>
                         <StyledComponent
                             onClick={() => scrollToMenu("projects")}
                         >
-                            Component 3
+                            진핸한 프로젝트
                         </StyledComponent>
                     </Container>
                 )}
