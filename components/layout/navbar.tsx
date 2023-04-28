@@ -18,7 +18,7 @@ const NavbarContainer = styled.nav<{ darkMode: boolean }>`
     justify-content: space-between;
     align-items: center;
     background-color: ${({ darkMode }) => (darkMode ? "#333" : "#f9f9f9")};
-    color: ${({ darkMode }) => (darkMode ? "#f9f9f9" : "#333")};
+    // color: ${({ darkMode }) => (darkMode ? "#f9f9f9" : "#333")};
     padding: 1rem;
     width: 100%;
     border-bottom: 1px solid #e1e3e6;
@@ -39,10 +39,13 @@ const NavMenuContainer = styled.div`
     }
 `;
 
-const NavLeftContainer = styled.div`
+const NavLeftContainer = styled.div<{ openMenu: boolean }>`
     display: flex;
     margin-left: 100px;
+    z-index: 999;
+    color: ${({ openMenu }) => (openMenu ? "#ffffff" : "#333")};
 
+    transition: color 0.2s ease-out;
     width: 30%;
 
     @media screen and (max-width: 768px) {
@@ -70,7 +73,6 @@ const NavMenuLink = styled.b<{ isDarkMode: boolean }>`
     }
 `;
 const NavMainLink = styled.b<{ isDarkMode: boolean }>`
-    color: ${({ isDarkMode }) => (isDarkMode ? "#f9f9f9" : "#333")};
     cursor: pointer;
     transition: color 0.2s ease-in-out;
     font-size: 28px;
@@ -230,7 +232,7 @@ const Navbar = ({
 
     return (
         <NavbarContainer darkMode={darkMode}>
-            <NavLeftContainer>
+            <NavLeftContainer openMenu={openMenu}>
                 <NavMainLink
                     isDarkMode={darkMode}
                     onClick={() => scrollToMenu("about-me")}
