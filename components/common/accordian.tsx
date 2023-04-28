@@ -57,8 +57,8 @@ const Accordion = ({ title, content }: AccordionProps) => {
     };
 
     return (
-        <StyledAccordion onClick={handleClick}>
-            <Title>
+        <StyledAccordion>
+            <Title onClick={handleClick}>
                 {title}
                 <Icon isOpen={isOpen} viewBox="0 0 24 24">
                     <path

@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const ScrollButton = styled.button`
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 35px;
+    right: 35px;
     background-color: #007bff;
     border-radius: 50%;
     width: 50px;

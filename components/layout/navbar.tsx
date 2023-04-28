@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
+import { useState } from "react";
 
 interface NavbarProps {
     darkMode: boolean;
@@ -17,7 +18,7 @@ const NavbarContainer = styled.nav<{ darkMode: boolean }>`
     justify-content: space-between;
     align-items: center;
     background-color: ${({ darkMode }) => (darkMode ? "#333" : "#f9f9f9")};
-    color: ${({ darkMode }) => (darkMode ? "#f9f9f9" : "#333")};
+    // color: ${({ darkMode }) => (darkMode ? "#f9f9f9" : "#333")};
     padding: 1rem;
     width: 100%;
     border-bottom: 1px solid #e1e3e6;
@@ -38,18 +39,25 @@ const NavMenuContainer = styled.div`
     }
 `;
 
-const NavLeftContainer = styled.div`
+const NavLeftContainer = styled.div<{ openMenu: boolean }>`
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 20%;
+    margin-left: 100px;
+    z-index: 999;
+    color: ${({ openMenu }) => (openMenu ? "#ffffff" : "#333")};
+
+    transition: color 0.2s ease-out;
+    width: 30%;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 5px;
+    }
 `;
 
 const NavRightContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 20%;
+    width: 10%;
 `;
 
 const NavMenuLink = styled.b<{ isDarkMode: boolean }>`
@@ -65,15 +73,17 @@ const NavMenuLink = styled.b<{ isDarkMode: boolean }>`
     }
 `;
 const NavMainLink = styled.b<{ isDarkMode: boolean }>`
-    color: ${({ isDarkMode }) => (isDarkMode ? "#f9f9f9" : "#333")};
-    margin: 0 1rem;
     cursor: pointer;
     transition: color 0.2s ease-in-out;
     font-size: 28px;
-    padding: 7px 0;
+    padding: 0.25rem 0;
 
     &:hover {
         color: ${({ isDarkMode }) => (isDarkMode ? "#ccc" : "#666")};
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
     }
 `;
 
@@ -87,6 +97,116 @@ const NavButton = styled.button<{ isDarkMode: boolean }>`
     &:hover {
         color: ${({ isDarkMode }) => (isDarkMode ? "#ccc" : "#666")};
     }
+`;
+
+const slideDown = keyframes`
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+`;
+
+const Container = styled.div<{ open: boolean }>`
+    color: #fff;
+    background-color: #3b3c3e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    animation: ${slideDown} 0.4s ease-in-out;
+`;
+
+const MenuBarContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+const StyledComponent = styled.div`
+    width: 100%;
+    padding: 14px 0;
+    font-size: 20px;
+`;
+
+const HamburgerWrapper = styled.div`
+    display: none;
+    width: 25px;
+    height: 12px;
+    position: relative;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        box-sizing: border-box;
+        z-index: 999;
+
+        &:focus {
+            outline: none;
+        }
+    }
+`;
+
+type HamburgerLineProps = {
+    firstLine?: boolean;
+    secondLine?: boolean;
+    thirdLine?: boolean;
+    fourthLine?: boolean;
+    openMenu?: boolean;
+};
+
+const HamburgerLine = styled.span<HamburgerLineProps>`
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: black;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+
+    ${({ firstLine }) =>
+        firstLine &&
+        css`
+            top: 0;
+        `}
+
+    ${({ secondLine }) =>
+        secondLine &&
+        css`
+            top: 6px;
+        `}
+  
+    ${({ thirdLine }) =>
+        thirdLine &&
+        css`
+            top: 12px;
+        `}
+  
+    ${({ openMenu }) =>
+        openMenu &&
+        css`
+            &:nth-child(1) {
+                background: #fff;
+                transform: translateY(6px) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                transform: scale(0);
+            }
+
+            &:nth-child(3) {
+                background: #fff;
+                transform: translateY(-6px) rotate(-45deg);
+            }
+        `}
 `;
 
 const Navbar = ({
@@ -104,9 +224,15 @@ const Navbar = ({
         });
     };
 
+    const [openMenu, setOpenMenu] = useState(false);
+
+    function handleClick() {
+        setOpenMenu(!openMenu);
+    }
+
     return (
         <NavbarContainer darkMode={darkMode}>
-            <NavLeftContainer>
+            <NavLeftContainer openMenu={openMenu}>
                 <NavMainLink
                     isDarkMode={darkMode}
                     onClick={() => scrollToMenu("about-me")}
@@ -138,8 +264,8 @@ const Navbar = ({
                     진행했던 프로젝트
                 </NavMenuLink>
             </NavMenuContainer>
-            {/* <NavRightContainer>
-                <NavButton onClick={toggleDarkMode} isDarkMode={darkMode}>
+            <NavRightContainer>
+                {/* <NavButton onClick={toggleDarkMode} isDarkMode={darkMode}>
                     {darkMode ? (
                         // 해 이미지
                         <svg
@@ -186,8 +312,32 @@ const Navbar = ({
 
                 <NavButton onClick={toggleLang} isDarkMode={darkMode}>
                     {lang === "eng" ? "ENG" : "KOR"}
-                </NavButton>
-            </NavRightContainer> */}
+                </NavButton> */}
+                <HamburgerWrapper className="hamburger" onClick={handleClick}>
+                    <HamburgerLine firstLine openMenu={openMenu} />
+                    <HamburgerLine secondLine openMenu={openMenu} />
+                    <HamburgerLine thirdLine openMenu={openMenu} />
+                </HamburgerWrapper>
+
+                {openMenu && (
+                    <Container open={openMenu}>
+                        <StyledComponent></StyledComponent>
+                        <StyledComponent
+                            onClick={() => scrollToMenu("about-me")}
+                        >
+                            저를 소개합니다
+                        </StyledComponent>
+                        <StyledComponent onClick={() => scrollToMenu("skill")}>
+                            사용한 기술들
+                        </StyledComponent>
+                        <StyledComponent
+                            onClick={() => scrollToMenu("projects")}
+                        >
+                            진핸한 프로젝트
+                        </StyledComponent>
+                    </Container>
+                )}
+            </NavRightContainer>
         </NavbarContainer>
     );
 };
