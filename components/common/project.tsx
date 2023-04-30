@@ -9,7 +9,11 @@ const Title = styled.h2`
     color: #333;
     font-size: 28px;
     margin: 18px;
+
     scroll-margin-top: 120px;
+    @media screen and (max-width: 768px) {
+        scroll-margin-top: 10px;
+    }
 `;
 
 const CardContainer = styled.div`
