@@ -75,7 +75,11 @@ export const ProjectData: Project[] = [
                 ReactJs는 IT서비스에서 핵심 요소인 <b>검색 엔진 최적화(SEO)</b>
                 에 큰 단점이 있다는점에 동기를 받아{" "}
                 <SkillDescription>NextJs</SkillDescription>의 이해도 증진과
-                Vercel을 활용한 가벼운 배포를 경험했습니다.
+                Vercel을 활용한 가벼운 배포를 경험했습니다. 또한 반응형 웹을
+                적용하면서 스타일 적용에 대한 복습을 진행했습니다. 짧은 기간
+                재미있게 개발하며 정보를 정리하고 본인의 부족한 것들을
+                되돌아보고 보충해야할 것을 파악하게된 여러모로 유익했던
+                프로젝트입니다.
             </span>
         ),
         link: ["https://github.com/Jun-Jinu/myPortfolio"],
