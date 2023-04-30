@@ -114,7 +114,7 @@ const slideUp = keyframes`
         transform: translateY(0);
     }
     to {
-        transform: translateY(50%);
+        transform: translateY(-100%);
     }
 `;
 
@@ -128,7 +128,9 @@ const Container = styled.div<{ openMenu: boolean }>`
     width: 100vw;
     flex-direction: column;
     text-align: center;
-    animation: ${slideDown} 0.4s ease-in-out;
+    animation: ${({ openMenu }) => (openMenu ? slideDown : slideUp)} 0.4s
+        ease-in-out;
+    animation-fill-mode: forwards;
 `;
 
 const MenuBarContainer = styled.div`
@@ -138,10 +140,16 @@ const MenuBarContainer = styled.div`
     align-items: center;
 `;
 
-const StyledComponent = styled.div`
+const MenuBarSpacer = styled.div`
+    width: 100%;
+    height: 50px;
+`;
+
+const MenuBarElement = styled.div`
     width: 100%;
     padding: 14px 0;
     font-size: 20px;
+    cursor: pointer;
 `;
 
 const HamburgerWrapper = styled.div`
@@ -236,31 +244,30 @@ const Navbar = ({
 
     const [openMenu, setOpenMenu] = useState(false);
 
-    function handleClick() {
+    function handleMenuOpen() {
         setOpenMenu(!openMenu);
     }
 
     return (
         <NavbarContainer darkMode={darkMode}>
             <NavLeftContainer openMenu={openMenu}>
-                <NavMainLink
-                    isDarkMode={darkMode}
-                    onClick={() => scrollToMenu("about-me")}
-                >
-                    JUN JINU
-                </NavMainLink>
+                <NavMainLink isDarkMode={darkMode}>JUN JINU</NavMainLink>
             </NavLeftContainer>
             <NavMenuContainer>
                 <NavMenuLink
                     isDarkMode={darkMode}
-                    onClick={() => scrollToMenu("about-me")}
+                    onClick={() => {
+                        scrollToMenu("about-me");
+                    }}
                 >
                     저를 소개합니다
                 </NavMenuLink>
 
                 <NavMenuLink
                     isDarkMode={darkMode}
-                    onClick={() => scrollToMenu("skill")}
+                    onClick={() => {
+                        scrollToMenu("skill");
+                    }}
                 >
                     사용한 기술들
                 </NavMenuLink>
@@ -269,7 +276,9 @@ const Navbar = ({
 
                 <NavMenuLink
                     isDarkMode={darkMode}
-                    onClick={() => scrollToMenu("projects")}
+                    onClick={() => {
+                        scrollToMenu("projects");
+                    }}
                 >
                     진행했던 프로젝트
                 </NavMenuLink>
@@ -323,30 +332,42 @@ const Navbar = ({
                 <NavButton onClick={toggleLang} isDarkMode={darkMode}>
                     {lang === "eng" ? "ENG" : "KOR"}
                 </NavButton> */}
-                <HamburgerWrapper className="hamburger" onClick={handleClick}>
+                <HamburgerWrapper
+                    className="hamburger"
+                    onClick={handleMenuOpen}
+                >
                     <HamburgerLine firstLine openMenu={openMenu} />
                     <HamburgerLine secondLine openMenu={openMenu} />
                     <HamburgerLine thirdLine openMenu={openMenu} />
                 </HamburgerWrapper>
 
-                {openMenu && (
-                    <Container openMenu={openMenu}>
-                        <StyledComponent></StyledComponent>
-                        <StyledComponent
-                            onClick={() => scrollToMenu("about-me")}
-                        >
-                            저를 소개합니다
-                        </StyledComponent>
-                        <StyledComponent onClick={() => scrollToMenu("skill")}>
-                            사용한 기술들
-                        </StyledComponent>
-                        <StyledComponent
-                            onClick={() => scrollToMenu("projects")}
-                        >
-                            진행한 프로젝트
-                        </StyledComponent>
-                    </Container>
-                )}
+                <Container openMenu={openMenu}>
+                    <MenuBarSpacer></MenuBarSpacer>
+                    <MenuBarElement
+                        onClick={() => {
+                            scrollToMenu("about-me");
+                            handleMenuOpen();
+                        }}
+                    >
+                        저를 소개합니다
+                    </MenuBarElement>
+                    <MenuBarElement
+                        onClick={() => {
+                            scrollToMenu("skill");
+                            handleMenuOpen();
+                        }}
+                    >
+                        사용한 기술들
+                    </MenuBarElement>
+                    <MenuBarElement
+                        onClick={() => {
+                            scrollToMenu("projects");
+                            handleMenuOpen();
+                        }}
+                    >
+                        진행한 프로젝트
+                    </MenuBarElement>
+                </Container>
             </NavRightContainer>
         </NavbarContainer>
     );

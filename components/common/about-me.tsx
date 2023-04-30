@@ -28,6 +28,9 @@ const Title = styled.h2`
     margin: 18px;
 
     scroll-margin-top: 120px;
+    @media screen and (max-width: 768px) {
+        scroll-margin-top: 10px;
+    }
 `;
 
 const Image = styled.img`
