@@ -72,6 +72,7 @@ const NavMenuLink = styled.b<{ isDarkMode: boolean }>`
         color: ${({ isDarkMode }) => (isDarkMode ? "#ccc" : "#666")};
     }
 `;
+
 const NavMainLink = styled.b<{ isDarkMode: boolean }>`
     cursor: pointer;
     transition: color 0.2s ease-in-out;
@@ -108,7 +109,16 @@ const slideDown = keyframes`
     }
 `;
 
-const Container = styled.div<{ open: boolean }>`
+const slideUp = keyframes`
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(50%);
+    }
+`;
+
+const Container = styled.div<{ openMenu: boolean }>`
     color: #fff;
     background-color: #3b3c3e;
     position: fixed;
@@ -320,7 +330,7 @@ const Navbar = ({
                 </HamburgerWrapper>
 
                 {openMenu && (
-                    <Container open={openMenu}>
+                    <Container openMenu={openMenu}>
                         <StyledComponent></StyledComponent>
                         <StyledComponent
                             onClick={() => scrollToMenu("about-me")}
@@ -333,7 +343,7 @@ const Navbar = ({
                         <StyledComponent
                             onClick={() => scrollToMenu("projects")}
                         >
-                            진핸한 프로젝트
+                            진행한 프로젝트
                         </StyledComponent>
                     </Container>
                 )}
