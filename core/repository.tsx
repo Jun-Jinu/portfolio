@@ -75,7 +75,7 @@ export const ProjectData: Project[] = [
                 ReactJs는 IT서비스에서 핵심 요소인 <b>검색 엔진 최적화(SEO)</b>
                 에 큰 단점이 있다는점에 동기를 받아{" "}
                 <SkillDescription>NextJs</SkillDescription>의 이해도 증진과
-                가벼운 배포를 경험했습니다.
+                Vercel을 활용한 가벼운 배포를 경험했습니다.
             </span>
         ),
         link: ["https://github.com/Jun-Jinu/myPortfolio"],
@@ -88,7 +88,7 @@ export const ProjectData: Project[] = [
             { featureTitle: "참여 역할", content: "전체 기획 및 개발" },
             {
                 featureTitle: "주요 사용 기술",
-                content: "NextJs, TypeScript, styled-components, netlify",
+                content: "NextJs, TypeScript, styled-components, Vercel",
             },
         ],
     },
@@ -180,7 +180,7 @@ export const ProjectData: Project[] = [
                     웹, 앱 모두 활용되는 서비스 방식과 아키텍쳐에 대해 공부하고
                     고찰을 시작
                 </b>
-                하게된 프로젝트입니다.
+                하게된/images/junjinu.jpeg 프로젝트입니다.
             </span>
         ),
         link: [
