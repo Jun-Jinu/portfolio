@@ -1,6 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
 import { useState, useEffect } from "react";
-import { toast } from "react-toastify";
 
 interface NavbarProps {
     darkMode: boolean;
