@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface NavbarProps {
     darkMode: boolean;
@@ -247,6 +247,21 @@ const Navbar = ({
     function handleMenuOpen() {
         setOpenMenu(!openMenu);
     }
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const { scrollTop, clientHeight } = document.documentElement;
+            if (scrollTop >= clientHeight - 1200) {
+                setOpenMenu(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <NavbarContainer darkMode={darkMode}>
