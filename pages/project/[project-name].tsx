@@ -1,7 +1,10 @@
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import styled from "styled-components";
+
 import { useEffect } from "react";
+import useDidMountEffect from "@/hooks/useDidMountEffect";
+
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -22,8 +25,8 @@ const Project: NextPage = () => {
     const projectName = router.query["project-name"];
 
     useEffect(() => {
-        // Show a toast notification when the component mounts
-        projectName ? toast.success(`Welcome to ${projectName}!`) : null;
+        // 마운트, 렌더링에 출력
+        projectName ? toast.success(`${projectName} 페이지 입니다!`) : null;
     }, [projectName]);
 
     return (
