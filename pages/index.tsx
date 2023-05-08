@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useDidMountEffect from "@/hooks/useDidMountEffect";
 import Head from "next/head";
 
 import Navbar from "@/components/layout/navbar";
@@ -12,6 +13,8 @@ import ScrollToTopButton from "@/components/common/button/scroll-to-top-button";
 
 import Project from "@/components/common/project";
 
+import { toast } from "react-toastify";
+
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false);
     const [lang, setLang] = useState("kor");
@@ -23,6 +26,10 @@ export default function Home() {
     const toggleLang = () => {
         setLang(lang === "kor" ? "eng" : "kor");
     };
+
+    useDidMountEffect(() => {
+        toast.success("모바일로도 보실 수 있습니다.");
+    }, []);
 
     return (
         <>
