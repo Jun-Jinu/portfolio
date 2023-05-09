@@ -24,7 +24,7 @@ const Project: NextPage = () => {
     const router = useRouter();
     const projectName = router.query["project-name"];
 
-    useEffect(() => {
+    useDidMountEffect(() => {
         // 마운트, 렌더링에 출력
         projectName ? toast.success(`${projectName} 페이지 입니다!`) : null;
     }, [projectName]);
