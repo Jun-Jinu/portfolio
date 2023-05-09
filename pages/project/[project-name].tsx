@@ -12,6 +12,10 @@ const Container = styled.div`
     padding: 100px;
 `;
 
+const ProjectTitle = styled.h1`
+    margin: 0 0 50px;
+`;
+
 const Title = styled.h2`
     margin: 0 0 50px;
 `;
@@ -31,6 +35,7 @@ const Project: NextPage = () => {
 
     return (
         <Container>
+            <ProjectTitle>{projectName}</ProjectTitle>
             <Title>Project: {projectName}</Title>
             <Description>
                 This is a description of the project, which could include
