@@ -187,7 +187,7 @@ export const ProjectData: Project[] = [
                     웹, 앱 모두 활용되는 서비스 방식과 아키텍쳐에 대해 공부하고
                     고찰을 시작
                 </b>
-                하게된/images/junjinu.jpeg 프로젝트입니다.
+                하게된 프로젝트입니다.
             </span>
         ),
         link: [
