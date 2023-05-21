@@ -27,6 +27,7 @@ export default function Home() {
         setLang(lang === "kor" ? "eng" : "kor");
     };
 
+    // useEffect 2번 실행 방지
     useDidMountEffect(() => {
         toast.success("모바일로도 보실 수 있습니다.");
     }, []);

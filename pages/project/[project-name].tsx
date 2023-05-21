@@ -11,14 +11,15 @@ const projects = [
     {
         name: "포트폴리오-사이트",
         subtitle: "[Web] 1인 프로젝트",
-        summary: "개발자로서 본인을 소개하기위해 만든 페이지입니다.",
+        summary:
+            "개발자로서 본인을 소개하기위해 만든 페이지입니다.비교적 경험과 지식이 부족하다고 생각했던 TypeScript, NextJs을 사용하며 기존에 익숙하던 Reactjs를 활용해서 개발했습니다. 또한 반응형 웹을 적용하면서 스타일 적용에 대한 복습을 진행했습니다.",
         functions: [
             {
-                title: "사용된 기술",
-                description: "Description of function 1",
+                title: "개발하게된 배경",
+                description: "NextJs, TypeScript, styled-components, Vercel",
             },
             {
-                title: "기능",
+                title: "기능들",
                 description: "Description of function 2",
             },
             {
@@ -26,16 +27,8 @@ const projects = [
                 description: "Description of function 2",
             },
             {
-                title: "의미",
-                description: "Description of function 2",
-            },
-            {
                 title: "사용된 기술",
-                description: "Description of function 2",
-            },
-            {
-                title: "멤버들",
-                description: "Description of function 2",
+                description: "NextJs, TypeScript, styled-components, Vercel",
             },
         ],
     },

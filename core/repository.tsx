@@ -136,7 +136,10 @@ export const ProjectData: Project[] = [
                 한 프로젝트입니다.
             </span>
         ),
-        link: ["https://github.com/SejongDDS"],
+        link: [
+            // "https://github.com/SejongDDS",
+            "https://github.com/Jun-Jinu/sdds_client",
+        ],
         features: [
             {
                 featureTitle: "주요 기능",
