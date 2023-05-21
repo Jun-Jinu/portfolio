@@ -9,22 +9,38 @@ import "react-toastify/dist/ReactToastify.css";
 
 const projects = [
     {
-        name: "Project1",
-        subtitle: "Subtitle 1",
-        summary: "Summary of project 1",
+        name: "포트폴리오-사이트",
+        subtitle: "[Web] 1인 프로젝트",
+        summary: "개발자로서 본인을 소개하기위해 만든 페이지입니다.",
         functions: [
             {
-                title: "Function 1",
+                title: "사용된 기술",
                 description: "Description of function 1",
             },
             {
-                title: "Function 2",
+                title: "기능",
+                description: "Description of function 2",
+            },
+            {
+                title: "본인이 수행한 활동",
+                description: "Description of function 2",
+            },
+            {
+                title: "의미",
+                description: "Description of function 2",
+            },
+            {
+                title: "사용된 기술",
+                description: "Description of function 2",
+            },
+            {
+                title: "멤버들",
                 description: "Description of function 2",
             },
         ],
     },
     {
-        name: "Project2",
+        name: "SDDS",
         subtitle: "Subtitle 2",
         summary: "Summary of project 2",
         functions: [
@@ -39,7 +55,7 @@ const projects = [
         ],
     },
     {
-        name: "Project3",
+        name: "집켜줘",
         subtitle: "Subtitle 3",
         summary: "Summary of project 3",
         functions: [
@@ -100,7 +116,7 @@ const Project: NextPage = () => {
         <Container>
             <ProjectTitle>📝 {selectedProject.name}</ProjectTitle>
             <ProjectSubtitle>{selectedProject.subtitle}</ProjectSubtitle>
-            <Title>Summary</Title>
+            <Title>개요</Title>
             <Description>{selectedProject.summary}</Description>
             {selectedProject.functions.map((func) => (
                 <div key={func.title}>
