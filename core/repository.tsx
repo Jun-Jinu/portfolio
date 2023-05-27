@@ -252,7 +252,6 @@ export const ProjectData: Project[] = [
         ],
     },
     {
-        //여기 수정중
         title: "집켜줘",
         subtitle: "[WEB, APP] 4인 프로젝트",
         imageSrc: [
@@ -300,6 +299,90 @@ export const ProjectData: Project[] = [
                 featureTitle: "참여 역할",
                 content:
                     "Flutter를 활용해 2개의 앱을 제작. 독거노인 단말기용 앱 개발, 독거노인 보호자 앱 개발, REST API 활용 서버 연동, 웹 페이지 제작 일부 기여",
+            },
+            {
+                featureTitle: "주요 사용 기술 및 서비스",
+                content: "Flutter, ReactJs, Spring Boot",
+            },
+        ],
+    },
+    {
+        title: "Uni Wi",
+        subtitle: "[APP] 개인 프로젝트",
+        imageSrc: [],
+        description: (
+            <span>
+                학우와 함께 Dart 및 Flutter 스터디를 진행하며 앱개발의 방식을
+                이해하기 위한 프로젝트입니다.
+                <br />
+                <br />
+                서비스 개발에는 웹, 앱, 서버, 머신러닝 분야에서 개발이
+                진행됐으며 앱 제작 전체를 담당했습니다.{" "}
+                <SkillDescription>Dart/Flutter</SkillDescription>를 사용해
+                개발을 진행했습니다.{" "}
+                <b>
+                    웹, 앱 모두 활용되는 서비스 방식과 아키텍쳐에 대해 공부하고
+                    고찰을 시작
+                </b>
+                하게된 프로젝트입니다.
+            </span>
+        ),
+        link: [
+            "https://github.com/Jun-Jinu/Turn_house_app",
+            "https://github.com/Jun-Jinu/TH_Terminal_app",
+        ],
+        features: [
+            {
+                featureTitle: "주요 기능",
+                content:
+                    "독거노인 사고 판단 및 신고, 마을 관리자의 공지(웹소켓 활용) 알림 및 저장, 로그인, 마을 관리, 날씨, 알람, 경고 사이렌, TTS 및 STT",
+            },
+            { featureTitle: "참여 기간", content: "2021.12 ~ 2022.02" },
+            {
+                featureTitle: "참여 역할",
+                content: "Flutter를 활용해 ",
+            },
+            {
+                featureTitle: "주요 사용 기술 및 서비스",
+                content: "Flutter, ReactJs, Spring Boot",
+            },
+        ],
+    },
+    {
+        title: "UniWiki",
+        subtitle: "[Web] 개인 프로젝트",
+        imageSrc: [],
+        description: (
+            <span>
+                학우와 함께 Dart 및 Flutter 스터디를 진행하며 앱개발의 방식을
+                이해하기 위한 프로젝트입니다.
+                <br />
+                <br />
+                서비스 개발에는 웹, 앱, 서버, 머신러닝 분야에서 개발이
+                진행됐으며 앱 제작 전체를 담당했습니다.{" "}
+                <SkillDescription>Dart/Flutter</SkillDescription>를 사용해
+                개발을 진행했습니다.{" "}
+                <b>
+                    웹, 앱 모두 활용되는 서비스 방식과 아키텍쳐에 대해 공부하고
+                    고찰을 시작
+                </b>
+                하게된 프로젝트입니다.
+            </span>
+        ),
+        link: [
+            "https://github.com/Jun-Jinu/Turn_house_app",
+            "https://github.com/Jun-Jinu/TH_Terminal_app",
+        ],
+        features: [
+            {
+                featureTitle: "주요 기능",
+                content:
+                    "독거노인 사고 판단 및 신고, 마을 관리자의 공지(웹소켓 활용) 알림 및 저장, 로그인, 마을 관리, 날씨, 알람, 경고 사이렌, TTS 및 STT",
+            },
+            { featureTitle: "참여 기간", content: "2021.12 ~ 2022.02" },
+            {
+                featureTitle: "참여 역할",
+                content: "Flutter를 활용해 ",
             },
             {
                 featureTitle: "주요 사용 기술 및 서비스",
