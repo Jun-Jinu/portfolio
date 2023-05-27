@@ -11,9 +11,6 @@
 - [Frontend] NextJs(ReactJs), TypeScript, styled-component
 - [Deployment] Vercel
 
-### 링크
-[포트폴리오 사이트](https://junjinu-portfolio-blue.vercel.app/)
-
 ### 실행 화면
 ### (PC) 첫 화면
 <img width="1447" alt="portfolio_1" src="https://user-images.githubusercontent.com/81470586/235359958-5251c389-5454-49e6-8003-21124a0120f8.png">

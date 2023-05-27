@@ -89,7 +89,7 @@ export const ProjectData: Project[] = [
         features: [
             {
                 featureTitle: "주요 기능",
-                content: "본인 소개, 기술 스택, 관련 링크, 프로젝트 기록",
+                content: "개발자 포트폴리오, 404페이지",
             },
             { featureTitle: "참여 기간", content: "2023.04 ~" },
             { featureTitle: "참여 역할", content: "전체 기획 및 개발" },
@@ -136,7 +136,10 @@ export const ProjectData: Project[] = [
                 한 프로젝트입니다.
             </span>
         ),
-        link: ["https://github.com/SejongDDS"],
+        link: [
+            // "https://github.com/SejongDDS",
+            "https://github.com/Jun-Jinu/sdds_client",
+        ],
         features: [
             {
                 featureTitle: "주요 기능",
@@ -187,7 +190,7 @@ export const ProjectData: Project[] = [
                     웹, 앱 모두 활용되는 서비스 방식과 아키텍쳐에 대해 공부하고
                     고찰을 시작
                 </b>
-                하게된/images/junjinu.jpeg 프로젝트입니다.
+                하게된 프로젝트입니다.
             </span>
         ),
         link: [
