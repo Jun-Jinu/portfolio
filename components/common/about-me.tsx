@@ -106,6 +106,7 @@ const Bubble = styled.div`
     width: 100%;
     padding: 25px;
 
+    color: #fff;
     background: #08bcff;
     border-radius: 20px;
 

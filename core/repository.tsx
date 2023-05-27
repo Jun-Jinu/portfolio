@@ -85,7 +85,7 @@ export const ProjectData: Project[] = [
                 여러모로 유익했던 프로젝트입니다.
             </span>
         ),
-        link: ["https://github.com/Jun-Jinu/myPortfolio"],
+        link: ["https://github.com/Jun-Jinu/portfolio"],
         features: [
             {
                 featureTitle: "주요 기능",
