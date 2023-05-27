@@ -188,21 +188,16 @@ const AboutMe = () => (
                         "JavaScript",
                         "SCSS",
                         "Recoil",
+                        "GraphQL",
                         "Dart",
+                        "GetX",
                     ]}
                 />
                 <Spacer />
                 <ImgCard
                     category={["주로 학습중인 기술"]}
-                    title={"NextJs, Spring Boot"}
-                    tag={[
-                        "TypeScript",
-                        "Java",
-                        "JPA",
-                        "MYSQL",
-                        "AWS",
-                        "GraphQL",
-                    ]}
+                    title={"NextJs, Flutter"}
+                    tag={["TypeScript", "MVVM", "Provider", "gradle", "Xcode"]}
                 />
             </RowContainer>
         </ColumnContainer>

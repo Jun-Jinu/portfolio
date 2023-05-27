@@ -100,6 +100,98 @@ export const ProjectData: Project[] = [
         ],
     },
     {
+        title: "ForInTrip(구상 및 진행중)",
+        subtitle: "[APP, Server] 개인 프로젝트",
+        imageSrc: [""],
+        description: (
+            <span>
+                한국을 여행하는 사람들에게 도움이 되고자 개발을
+                진행하고있습니다. 급증하는 한국 여행자의 수에서 개발시 필요한
+                기능을 중점적으로 제공한다면 당연히 수요가 있을것으로
+                생각했습니다.
+                <br />
+                <br />
+                앱에 제공할 기능을 정리하며 UI를 구성하고 있습니다. BLoC을
+                활용한 구조를 적용하려고 했으나 최근 Provider를 활용한 장점이
+                많다는 것에 호기심이 생겨 학습을 진행할 예정입니다.
+                <SkillDescription>
+                    디자인패턴(Provider Pattarn)
+                </SkillDescription>
+                을 적용한 리팩토링을 진행할 예정이며 유지보수와 협업 측면에서
+                장점을 가져가도록 설계되었습니다. 디자인, 프로젝트 관리자, 웹
+                프론트엔드, 웹 백엔드, 앱 프론트엔드로 다양한 역할의 멤버들과
+                협업을 경험했습니다.{" "}
+                <b>
+                    Flutter를 다시 복습하기도 헀으며 앞서 웹 풀스택 개발을
+                    경험하면서 얻었던 지식등을 바탕으로 디자인패턴, 아키텍쳐
+                    공부에 몰입한
+                </b>{" "}
+                프로젝트입니다.
+            </span>
+        ),
+        link: ["https://github.com/Jun-Jinu/ForInTrip"],
+        features: [
+            {
+                featureTitle: "주요 기능",
+                content: "유명한 한국 여행지 추천, 여행 계획 정리, 여행 기록",
+            },
+            { featureTitle: "참여 기간", content: "2023.03 ~ " },
+            {
+                featureTitle: "참여 역할",
+                content: "앱 및 서버 개발",
+            },
+            {
+                featureTitle: "주요 사용 기술 및 툴",
+                content: "Flutter(Dart), BLoc, Figma",
+            },
+        ],
+    },
+    {
+        title: "Danvery",
+        subtitle: "[APP] 단체 프로젝트",
+        imageSrc: [""],
+        description: (
+            <span>
+                단국대학교 총학생회 IT국과 협업하며 진행했던 프로젝트입니다.
+                단국대학교 학생들을 주타겟으로하여 해당 학생들이 불편으로
+                겪고있는 버스 시간 안내를 중점으로 단국대학교만의 커뮤니티
+                형성을 도모한 프로젝트입니다. 현재 구글 플레이스토어, 애플
+                앱스토어에 있는 어플입니다.
+                <br />
+                <br />
+                조금 더 체계적인{" "}
+                <SkillDescription>디자인패턴(getx pattarn)</SkillDescription>을
+                적용하면서 유지보수와 협업 측면에서 장점을 가져가도록
+                설계되었습니다. 디자인, 프로젝트 관리자, 웹 프론트엔드, 웹
+                백엔드, 앱 프론트엔드로 다양한 역할의 멤버들과 협업을
+                경험했습니다.{" "}
+                <b>
+                    Flutter를 다시 복습하기도 헀으며 앞서 웹 풀스택 개발을
+                    경험하면서 얻었던 지식등을 바탕으로 디자인패턴, 아키텍쳐
+                    공부에 몰입한
+                </b>{" "}
+                프로젝트입니다.
+            </span>
+        ),
+        link: ["https://github.com/Jun-Jinu/danvery"],
+        features: [
+            {
+                featureTitle: "주요 기능",
+                content:
+                    "시간표, 버스 안내, 청원 게시판, 자유 게시판, 마이페이지, 테마 변경",
+            },
+            { featureTitle: "참여 기간", content: "2023.01 ~ 2023.04" },
+            {
+                featureTitle: "참여 역할",
+                content: "앱 개발 기여(게시판 주로 참가), 현재 유지보수 미참가",
+            },
+            {
+                featureTitle: "주요 사용 기술 및 툴",
+                content: "Flutter(Dart), GetX, Figma",
+            },
+        ],
+    },
+    {
         title: "SDDS",
         subtitle: "[Web] 4인 프로젝트",
         imageSrc: [
@@ -207,7 +299,7 @@ export const ProjectData: Project[] = [
             {
                 featureTitle: "참여 역할",
                 content:
-                    "독거노인 단말기용 앱 개발, 독거노인 보호자 앱 개발, REST API 활용 서버 연동, 웹 페이지 제작 일부 기여",
+                    "Flutter를 활용해 2개의 앱을 제작. 독거노인 단말기용 앱 개발, 독거노인 보호자 앱 개발, REST API 활용 서버 연동, 웹 페이지 제작 일부 기여",
             },
             {
                 featureTitle: "주요 사용 기술 및 서비스",

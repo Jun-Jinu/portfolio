@@ -180,7 +180,7 @@ const ProjectCard = () => {
                                     <Description>{description}</Description>
 
                                     <b>
-                                        <FaGithub size={16} /> GitHub (README)
+                                        <FaGithub size={16} /> GitHub
                                     </b>
                                     {link.map((linkSrc) => (
                                         <a key={linkSrc} href={linkSrc}>
