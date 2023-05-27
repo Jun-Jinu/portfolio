@@ -105,8 +105,6 @@ export const ProjectData: Project[] = [
         imageSrc: [
             "/images/forintrip/ForInTrip1.png",
             "/images/forintrip/ForInTrip2.png",
-            "/images/forintrip/ForInTrip3.png",
-            "/images/forintrip/ForInTrip4.png",
         ],
         description: (
             <span>
@@ -155,11 +153,8 @@ export const ProjectData: Project[] = [
         title: "Danvery",
         subtitle: "[APP] 단체 프로젝트",
         imageSrc: [
-            "/images/danvery/danvery1.jpg",
-            "/images/danvery/danvery2.jpg",
-            "/images/danvery/danvery3.png",
-            "/images/danvery/danvery4.png",
-            "/images/danvery/danvery5.png",
+            "/images/danvery/danvery1.png",
+            "/images/danvery/danvery2.png",
         ],
         description: (
             <span>
