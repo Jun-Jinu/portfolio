@@ -154,7 +154,13 @@ export const ProjectData: Project[] = [
     {
         title: "Danvery",
         subtitle: "[APP] 단체 프로젝트",
-        imageSrc: [""],
+        imageSrc: [
+            "/images/danvery/danvery1.jpg",
+            "/images/danvery/danvery2.jpg",
+            "/images/danvery/danvery3.png",
+            "/images/danvery/danvery4.png",
+            "/images/danvery/danvery5.png",
+        ],
         description: (
             <span>
                 단국대학교 총학생회 IT국과 협업하며 진행했던 프로젝트입니다.
@@ -178,7 +184,7 @@ export const ProjectData: Project[] = [
                 프로젝트입니다.
             </span>
         ),
-        link: ["https://github.com/Jun-Jinu/danvery"],
+        link: ["https://github.com/chocojaem/danvery"],
         features: [
             {
                 featureTitle: "주요 기능",
