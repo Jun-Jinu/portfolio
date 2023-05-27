@@ -105,8 +105,6 @@ export const ProjectData: Project[] = [
         imageSrc: [
             "/images/forintrip/ForInTrip1.png",
             "/images/forintrip/ForInTrip2.png",
-            "/images/forintrip/ForInTrip3.png",
-            "/images/forintrip/ForInTrip4.png",
         ],
         description: (
             <span>
@@ -155,19 +153,16 @@ export const ProjectData: Project[] = [
         title: "Danvery",
         subtitle: "[APP] 단체 프로젝트",
         imageSrc: [
-            "/images/danvery/danvery1.jpg",
-            "/images/danvery/danvery2.jpg",
-            "/images/danvery/danvery3.png",
-            "/images/danvery/danvery4.png",
-            "/images/danvery/danvery5.png",
+            "/images/danvery/danvery1.png",
+            "/images/danvery/danvery2.png",
         ],
         description: (
             <span>
                 단국대학교 총학생회 IT국과 협업하며 진행했던 프로젝트입니다.
                 단국대학교 학생들을 주타겟으로하여 해당 학생들이 불편으로
                 겪고있는 버스 시간 안내를 중점으로 단국대학교만의 커뮤니티
-                형성을 도모한 프로젝트입니다. 현재 구글 플레이스토어, 애플
-                앱스토어에 있는 어플입니다.
+                형성을 위한 어플 개발 프로젝트입니다. 현재 구글 플레이스토어,
+                애플 앱스토어에 있는 어플입니다.
                 <br />
                 <br />
                 조금 더 체계적인{" "}

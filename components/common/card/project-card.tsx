@@ -78,7 +78,10 @@ const CarouselContainer = styled.div`
     margin: 0 auto 40px auto;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+    width: auto;
+    height: auto;
+`;
 
 const InfoContainer = styled.div`
     display: flex;
