@@ -106,6 +106,7 @@ const Bubble = styled.div`
     width: 100%;
     padding: 25px;
 
+    color: #fff;
     background: #08bcff;
     border-radius: 20px;
 
@@ -172,36 +173,23 @@ const AboutMe = () => (
                 </RowContainer>
             </BasicCard>
             <Bubble>
-                <b>웹 풀스택 개발자 전진우</b>입니다. 실무 경력은 없지만 새로운
-                것을 배우며 알고 있는 것을 공유하고 넓혀가는 활동을 중요성을
-                느끼고 적극적으로 발전하고자 합니다. 또한 다양한 코딩을 취미로
-                즐기는 것이 저의 장점입니다.
+                <b>Flutter App 개발자 전진우</b>입니다. 실무 경력은 없지만
+                새로운 것을 배우며 알고 있는 것을 공유하고 넓혀가는 활동을
+                중요성을 느끼고 적극적으로 발전하고자 합니다. 또한 Web과
+                Server등 도움이 될만한 코딩들을 취미로 즐기는 것이 저의
+                장점입니다.
             </Bubble>
             <RowContainer>
                 <ImgCard
                     category={["주로 사용했던 기술"]}
                     title={"ReactJs, Flutter"}
-                    tag={[
-                        "HTML",
-                        "CSS",
-                        "JavaScript",
-                        "SCSS",
-                        "Recoil",
-                        "Dart",
-                    ]}
+                    tag={["JavaScript", "Recoil", "GraphQL", "Dart", "GetX"]}
                 />
                 <Spacer />
                 <ImgCard
                     category={["주로 학습중인 기술"]}
-                    title={"NextJs, Spring Boot"}
-                    tag={[
-                        "TypeScript",
-                        "Java",
-                        "JPA",
-                        "MYSQL",
-                        "AWS",
-                        "GraphQL",
-                    ]}
+                    title={"NextJs, Flutter"}
+                    tag={["TypeScript", "MVVM", "Provider", "gradle", "Xcode"]}
                 />
             </RowContainer>
         </ColumnContainer>
