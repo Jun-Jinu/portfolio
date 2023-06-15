@@ -100,55 +100,123 @@ export const ProjectData: Project[] = [
         ],
     },
     {
-        title: "ForInTrip(구상 및 진행중)",
+        title: "WillGrow",
         subtitle: "[APP] 개인 프로젝트",
         imageSrc: [
-            "/images/forintrip/ForInTrip1.png",
-            "/images/forintrip/ForInTrip2.png",
+            "/images/willgrow/willgrow2.png",
+            "/images/willgrow/willgrow1.png",
         ],
         description: (
             <span>
-                <b>
-                    여행이 취미인 스스로에게 필요한 서비스를 만들어보고 싶은
-                    욕심에서 시작
-                </b>
-                했습니다. 나아가 한국을 여행하는 사람들에게 도움이 되고자 개발을
-                진행하고있습니다. 급증하는 한국 여행자의 수에서 어플이 적더라도
-                필요한 기능만 제공한다면 당연히 수요가 있을것으로 생각하고 개발
-                진행중입니다.
-                <br />
-                <br />
-                앱에 제공할 기능을 정리하며 UI를 구성하고 있습니다. BLoC을
-                활용한 구조를 적용하려고 했으나 최근{" "}
-                <SkillDescription>Provider</SkillDescription>를 활용한 장점이
-                많다는 것에 호기심이 생겨 학습을 진행할 예정입니다.
+                매일 일기를 작성하며 기분을 기록하고 다짐을 하는데 도움을 주는
+                앱입니다. 사용자는 간편하게 일기를 작성하고 기분을 선택할 수
+                있으며, 각 일기에는 한 문장으로 다짐을 추가할 수 있습니다. 앱은
+                Flutter로 개발되었으며,{" "}
                 <SkillDescription>
-                    디자인패턴(Provider Pattarn)
+                    MVVM 구조와 Provider, Hive 등의 패키지
                 </SkillDescription>
-                을 적용한 리팩토링을 진행할 예정이며 여러 개발 예시를 찾아보며
-                더 학습할 내용을 적극적으로 찾으며 개발하고 있습니다.
-                <b>앱 개발 역량을 집중적으로 키우기 위한 프로젝트</b>이며
-                개발자로서 <b>서비스 구현부터 유지보수까지 역량을 키우기위한</b>{" "}
-                프로젝트입니다.
+                를 사용하여 효율적이고 확장 가능한 코드를 구현했습니다.
+                <br />
+                이 앱은 사용자가 일기를 쓰고 감정을 기록함으로써 자기 성장과
+                감정 관리에 도움을 주는데 초점을 두고 있습니다. 사용자는 각
+                일기의 기분을 선택하고 다짐을 작성함으로써 목표 달성과 긍정적인
+                변화를 위한 동기부여를 받을 수 있습니다. 또한, 일기를 쓰는
+                습관을 통해 자신의 감정과 생각을 더 잘 이해하고 관찰할 수
+                있습니다.
+                <br />
+                앱은 사용자 친화적인 인터페이스를 제공하여 일기 작성을 간편하게
+                만들어줍니다. 글씨체, 강조 색상, 글씨 크기 등의 사용자 설정을
+                통해 개인화된 환경을 조성할 수 있습니다. 또한, 홈화면 위젯을
+                통해 대표 다짐을 설정하고 사용자마다 위젯을 개인화하여 편리하게
+                접근할 수 있습니다.
+                <br />
+                향후 계획으로는 앱을 App Store와 Play Store에 출시할 예정이며,
+                감정 시각화 기능을 추가하여 사용자들이 자신의 감정을 더욱
+                명확하게 이해하고 추적할 수 있도록 할 것입니다. 또한, 버그
+                개선과 검색 기능 추가를 통해 사용자들의 편의성과 앱의 안정성을
+                향상시킬 것입니다.
+                <br />이 앱을 개발하면서 저는
+                <SkillDescription>
+                    {" "}
+                    Flutter와 Provider, Hive 등의 패키지
+                </SkillDescription>
+                를 사용하는 경험을 쌓을 수 있었습니다. 또한,
+                <SkillDescription> MVVM 아키텍처</SkillDescription>를 적용하여
+                코드의 유지 보수성과 확장성을 향상시킬 수 있었습니다. 사용자
+                피드백을 받고 반영하는 과정에서 사용자 중심의 디자인과 개선에
+                대한 중요성을 깨달았습니다. 이러한 경험을 통해 앞으로의 개발
+                프로젝트에도 보다 나은 앱을 제공할 수 있게 되었습니다.
             </span>
         ),
-        link: ["https://github.com/Jun-Jinu/ForInTrip"],
+        link: ["https://github.com/Jun-Jinu/-Will-Grow-Widget-App"],
         features: [
             {
                 featureTitle: "주요 기능",
-                content: "유명한 한국 여행지 추천, 여행 계획 정리, 여행 기록",
+                content:
+                    "일기 작성, 감정 기록, 다짐 작성, 알림 설정, 테마 개인화 기능, 홈화면 위젯",
             },
-            { featureTitle: "참여 기간", content: "2023.03 ~ " },
+            { featureTitle: "참여 기간", content: "2023.06 ~ " },
             {
                 featureTitle: "참여 역할",
                 content: "앱 개발 전체",
             },
             {
                 featureTitle: "주요 사용 기술 및 툴",
-                content: "Flutter(Dart), Provider(예정), Figma",
+                content:
+                    "Flutter(Dart), Swift, VS Code, Xcode, Provider, Hive(로컬 스토리지), Figma",
             },
         ],
     },
+    // {
+    //     title: "ForInTrip(구상 및 진행중)",
+    //     subtitle: "[APP] 개인 프로젝트",
+    //     imageSrc: [
+    //         "/images/forintrip/ForInTrip1.png",
+    //         "/images/forintrip/ForInTrip2.png",
+    //     ],
+    //     description: (
+    //         <span>
+    //             <b>
+    //                 여행이 취미인 스스로에게 필요한 서비스를 만들어보고 싶은
+    //                 욕심에서 시작
+    //             </b>
+    //             했습니다. 나아가 한국을 여행하는 사람들에게 도움이 되고자 개발을
+    //             진행하고있습니다. 급증하는 한국 여행자의 수에서 어플이 적더라도
+    //             필요한 기능만 제공한다면 당연히 수요가 있을것으로 생각하고 개발
+    //             진행중입니다.
+    //             <br />
+    //             <br />
+    //             앱에 제공할 기능을 정리하며 UI를 구성하고 있습니다. BLoC을
+    //             활용한 구조를 적용하려고 했으나 최근{" "}
+    //             <SkillDescription>Provider</SkillDescription>를 활용한 장점이
+    //             많다는 것에 호기심이 생겨 학습을 진행할 예정입니다.
+    //             <SkillDescription>
+    //                 디자인패턴(Provider Pattarn)
+    //             </SkillDescription>
+    //             을 적용한 리팩토링을 진행할 예정이며 여러 개발 예시를 찾아보며
+    //             더 학습할 내용을 적극적으로 찾으며 개발하고 있습니다.
+    //             <b>앱 개발 역량을 집중적으로 키우기 위한 프로젝트</b>이며
+    //             개발자로서 <b>서비스 구현부터 유지보수까지 역량을 키우기위한</b>{" "}
+    //             프로젝트입니다.
+    //         </span>
+    //     ),
+    //     link: ["https://github.com/Jun-Jinu/ForInTrip"],
+    //     features: [
+    //         {
+    //             featureTitle: "주요 기능",
+    //             content: "유명한 한국 여행지 추천, 여행 계획 정리, 여행 기록",
+    //         },
+    //         { featureTitle: "참여 기간", content: "2023.03 ~ " },
+    //         {
+    //             featureTitle: "참여 역할",
+    //             content: "앱 개발 전체",
+    //         },
+    //         {
+    //             featureTitle: "주요 사용 기술 및 툴",
+    //             content: "Flutter(Dart), Provider(예정), Figma",
+    //         },
+    //     ],
+    // },
     {
         title: "Danvery",
         subtitle: "[APP] 단체 프로젝트",
