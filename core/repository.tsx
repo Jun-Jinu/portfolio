@@ -151,7 +151,7 @@ export const ProjectData: Project[] = [
                 대한 중요성을 깨달았습니다. 이러한 경험을 통해 앞으로의 개발
                 프로젝트에도 보다 나은 앱을 제공할 수 있게 되었습니다.
             </span>
-        ),
+        ), //
         link: ["https://github.com/Jun-Jinu/-Will-Grow-Widget-App"],
         features: [
             {
